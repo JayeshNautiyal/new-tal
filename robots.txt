@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /?*
+Disallow: /*?*
+
+# Sitemap
+Sitemap: https://www.talhive.com/sitemap.xml

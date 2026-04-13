@@ -1,0 +1,1267 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/how-recruitment-agencies-like-talhive-are-transforming-business-hiring-in-mumbais-evolving-job-market",
+      "destination": "/blog/recruitment-transforming-mumbai-hiring.html",
+      "permanent": true
+    },
+    {
+      "source": "/how-recruitment-agencies-like-talhive-are-transforming-business-hiring-in-mumbais-evolving-job-market/",
+      "destination": "/blog/recruitment-transforming-mumbai-hiring.html",
+      "permanent": true
+    },
+    {
+      "source": "/2024-tech-recruitment-landscape-emerging-trends-and-the-role-of-talhive-in-sourcing-top-talent",
+      "destination": "/blog/tech-recruitment-landscape.html",
+      "permanent": true
+    },
+    {
+      "source": "/2024-tech-recruitment-landscape-emerging-trends-and-the-role-of-talhive-in-sourcing-top-talent/",
+      "destination": "/blog/tech-recruitment-landscape.html",
+      "permanent": true
+    },
+    {
+      "source": "/how-businesses-can-achieve-growth-in-the-us-with-the-right-talent-acquisition-partner-in-2023",
+      "destination": "/blog/business-growth-talent-acquisition-usa.html",
+      "permanent": true
+    },
+    {
+      "source": "/how-businesses-can-achieve-growth-in-the-us-with-the-right-talent-acquisition-partner-in-2023/",
+      "destination": "/blog/business-growth-talent-acquisition-usa.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/technology-hiring/hire-developers-programmers/hire-machine-learning-engineers",
+      "destination": "/hire/machine-learning-engineers.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/technology-hiring/hire-developers-programmers/hire-machine-learning-engineers/",
+      "destination": "/hire/machine-learning-engineers.html",
+      "permanent": true
+    },
+    {
+      "source": "/chat-gpt-and-recruitment-marketing-creating-effective-job-ads-and-employer-branding",
+      "destination": "/blog/chatgpt-recruitment-marketing.html",
+      "permanent": true
+    },
+    {
+      "source": "/chat-gpt-and-recruitment-marketing-creating-effective-job-ads-and-employer-branding/",
+      "destination": "/blog/chatgpt-recruitment-marketing.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer-solutions-usa/executive-search-recruiter-and-headhunters-in-washington-dc",
+      "destination": "/usa/executive-search.htmlwashington-dc/",
+      "permanent": true
+    },
+    {
+      "source": "/employer-solutions-usa/executive-search-recruiter-and-headhunters-in-washington-dc/",
+      "destination": "/usa/executive-search.htmlwashington-dc/",
+      "permanent": true
+    },
+    {
+      "source": "/employer/technology-hiring/hire-developers-programmers/hire-android-app-developer",
+      "destination": "/hire/android-developers.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/technology-hiring/hire-developers-programmers/hire-android-app-developer/",
+      "destination": "/hire/android-developers.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/technology-hiring/hire-developers-programmers/hire-blockchain-developers",
+      "destination": "/hire/blockchain-developers.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/technology-hiring/hire-developers-programmers/hire-blockchain-developers/",
+      "destination": "/hire/blockchain-developers.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/technology-hiring/hire-developers-programmers/hire-cybersecurity-experts",
+      "destination": "/hire/cybersecurity-experts.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/technology-hiring/hire-developers-programmers/hire-cybersecurity-experts/",
+      "destination": "/hire/cybersecurity-experts.html",
+      "permanent": true
+    },
+    {
+      "source": "/best-talent-acquisition-agency-in-usa-why-there-is-a-need-for-recruitment-agency",
+      "destination": "/blog/talent-acquisition-agency-usa.html",
+      "permanent": true
+    },
+    {
+      "source": "/best-talent-acquisition-agency-in-usa-why-there-is-a-need-for-recruitment-agency/",
+      "destination": "/blog/talent-acquisition-agency-usa.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/technology-hiring/hire-developers-programmers/hire-wordpress-developer",
+      "destination": "/hire/wordpress-developers.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/technology-hiring/hire-developers-programmers/hire-wordpress-developer/",
+      "destination": "/hire/wordpress-developers.html",
+      "permanent": true
+    },
+    {
+      "source": "/visualize-success-uncovering-top-design-talent-through-our-recruitment-process",
+      "destination": "/blog/design-talent-recruitment.html",
+      "permanent": true
+    },
+    {
+      "source": "/visualize-success-uncovering-top-design-talent-through-our-recruitment-process/",
+      "destination": "/blog/design-talent-recruitment.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/technology-hiring/hire-developers-programmers/hire-laravel-developer",
+      "destination": "/hire/laravel-developers.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/technology-hiring/hire-developers-programmers/hire-laravel-developer/",
+      "destination": "/hire/laravel-developers.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer-solutions-usa/executive-search-recruiter-and-headhunters-in-houston",
+      "destination": "/usa/executive-search.htmlhouston.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer-solutions-usa/executive-search-recruiter-and-headhunters-in-houston/",
+      "destination": "/usa/executive-search.htmlhouston.html",
+      "permanent": true
+    },
+    {
+      "source": "/how-chat-gpt-can-streamline-the-recruitment-process-and-save-time-and-money",
+      "destination": "/blog/chatgpt-streamline-hiring.html",
+      "permanent": true
+    },
+    {
+      "source": "/how-chat-gpt-can-streamline-the-recruitment-process-and-save-time-and-money/",
+      "destination": "/blog/chatgpt-streamline-hiring.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/technology-hiring/hire-developers-programmers/hire-data-scientist",
+      "destination": "/hire/data-scientists.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/technology-hiring/hire-developers-programmers/hire-data-scientist/",
+      "destination": "/hire/data-scientists.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/technology-hiring/hire-developers-programmers/hire-data-engineers",
+      "destination": "/hire/data-engineers.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/technology-hiring/hire-developers-programmers/hire-data-engineers/",
+      "destination": "/hire/data-engineers.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/technology-hiring/hire-developers-programmers/hire-java-developer",
+      "destination": "/hire/java-developers.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/technology-hiring/hire-developers-programmers/hire-java-developer/",
+      "destination": "/hire/java-developers.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/technology-hiring/hire-developers-programmers/hire-game-developer",
+      "destination": "/hire/game-developers.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/technology-hiring/hire-developers-programmers/hire-game-developer/",
+      "destination": "/hire/game-developers.html",
+      "permanent": true
+    },
+    {
+      "source": "/top-recruitment-agencies-in-india-for-2024-transforming-talent-acquisition",
+      "destination": "/blog/top-recruitment-agencies-india.html",
+      "permanent": true
+    },
+    {
+      "source": "/top-recruitment-agencies-in-india-for-2024-transforming-talent-acquisition/",
+      "destination": "/blog/top-recruitment-agencies-india.html",
+      "permanent": true
+    },
+    {
+      "source": "/staffing-up-your-startup-with-talhive-your-ultimate-us-recruitment-partner",
+      "destination": "/blog/startup-staffing-partner-usa.html",
+      "permanent": true
+    },
+    {
+      "source": "/staffing-up-your-startup-with-talhive-your-ultimate-us-recruitment-partner/",
+      "destination": "/blog/startup-staffing-partner-usa.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/technology-hiring/hire-developers-programmers/hire-sql-developer",
+      "destination": "/hire/sql-developers.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/technology-hiring/hire-developers-programmers/hire-sql-developer/",
+      "destination": "/hire/sql-developers.html",
+      "permanent": true
+    },
+    {
+      "source": "/startup-recruitment-strategies-how-to-hire-employees-for-a-startup-in-usa",
+      "destination": "/blog/startup-recruitment-strategies-usa.html",
+      "permanent": true
+    },
+    {
+      "source": "/startup-recruitment-strategies-how-to-hire-employees-for-a-startup-in-usa/",
+      "destination": "/blog/startup-recruitment-strategies-usa.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/technology-hiring/hire-developers-programmers/hire-ai-engineers",
+      "destination": "/hire/ai-engineers.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/technology-hiring/hire-developers-programmers/hire-ai-engineers/",
+      "destination": "/hire/ai-engineers.html",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-secure-top-tech-talent-for-your-startup-in-the-competitive-market",
+      "destination": "/blog/hiring-tech-talent-startup.html",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-secure-top-tech-talent-for-your-startup-in-the-competitive-market/",
+      "destination": "/blog/hiring-tech-talent-startup.html",
+      "permanent": true
+    },
+    {
+      "source": "/millennials-plus-technology-navigating-the-good-the-bad-and-the-awkward",
+      "destination": "/blog/millennials-and-technology.html",
+      "permanent": true
+    },
+    {
+      "source": "/millennials-plus-technology-navigating-the-good-the-bad-and-the-awkward/",
+      "destination": "/blog/millennials-and-technology.html",
+      "permanent": true
+    },
+    {
+      "source": "/chat-gpt-and-employee-retention-strategies-to-keep-your-best-employees",
+      "destination": "/blog/chatgpt-employee-retention.html",
+      "permanent": true
+    },
+    {
+      "source": "/chat-gpt-and-employee-retention-strategies-to-keep-your-best-employees/",
+      "destination": "/blog/chatgpt-employee-retention.html",
+      "permanent": true
+    },
+    {
+      "source": "/what-candidates-should-know-about-chat-gpt-and-the-recruitment-process",
+      "destination": "/blog/chatgpt-candidates-guide.html",
+      "permanent": true
+    },
+    {
+      "source": "/what-candidates-should-know-about-chat-gpt-and-the-recruitment-process/",
+      "destination": "/blog/chatgpt-candidates-guide.html",
+      "permanent": true
+    },
+    {
+      "source": "/using-chat-gpt-to-prepare-for-job-interviews-a-comprehensive-guide",
+      "destination": "/blog/chatgpt-job-interview-prep.html",
+      "permanent": true
+    },
+    {
+      "source": "/using-chat-gpt-to-prepare-for-job-interviews-a-comprehensive-guide/",
+      "destination": "/blog/chatgpt-job-interview-prep.html",
+      "permanent": true
+    },
+    {
+      "source": "/how-chat-gpt-can-help-employers-identify-soft-skills-in-candidates",
+      "destination": "/blog/chatgpt-soft-skills-assessment.html",
+      "permanent": true
+    },
+    {
+      "source": "/how-chat-gpt-can-help-employers-identify-soft-skills-in-candidates/",
+      "destination": "/blog/chatgpt-soft-skills-assessment.html",
+      "permanent": true
+    },
+    {
+      "source": "/why-it-contracting-jobs-are-skyrocketing-in-the-usas-tech-industry",
+      "destination": "/blog/it-contracting-jobs-usa.html",
+      "permanent": true
+    },
+    {
+      "source": "/why-it-contracting-jobs-are-skyrocketing-in-the-usas-tech-industry/",
+      "destination": "/blog/it-contracting-jobs-usa.html",
+      "permanent": true
+    },
+    {
+      "source": "/why-mumbai-delhi-and-bangalore-are-the-recruitment-hubs-of-india",
+      "destination": "/blog/india-recruitment-hubs.html",
+      "permanent": true
+    },
+    {
+      "source": "/why-mumbai-delhi-and-bangalore-are-the-recruitment-hubs-of-india/",
+      "destination": "/blog/india-recruitment-hubs.html",
+      "permanent": true
+    },
+    {
+      "source": "/unlocking-keralas-talent-pool-your-guide-to-recruitment-agencies",
+      "destination": "/blog/kerala-recruitment-agencies.html",
+      "permanent": true
+    },
+    {
+      "source": "/unlocking-keralas-talent-pool-your-guide-to-recruitment-agencies/",
+      "destination": "/blog/kerala-recruitment-agencies.html",
+      "permanent": true
+    },
+    {
+      "source": "/chat-gpt-and-employee-referrals-a-powerful-tool-for-recruitment",
+      "destination": "/blog/chatgpt-employee-referrals.html",
+      "permanent": true
+    },
+    {
+      "source": "/chat-gpt-and-employee-referrals-a-powerful-tool-for-recruitment/",
+      "destination": "/blog/chatgpt-employee-referrals.html",
+      "permanent": true
+    },
+    {
+      "source": "/ai-in-recruitment-key-trends-shaping-talent-acquisition-in-2025",
+      "destination": "/blog/ai-recruitment-trends.html",
+      "permanent": true
+    },
+    {
+      "source": "/ai-in-recruitment-key-trends-shaping-talent-acquisition-in-2025/",
+      "destination": "/blog/ai-recruitment-trends.html",
+      "permanent": true
+    },
+    {
+      "source": "/introducing-ai-for-hiring-the-power-of-chat-gpt-in-recruitment",
+      "destination": "/blog/ai-for-hiring-chatgpt.html",
+      "permanent": true
+    },
+    {
+      "source": "/introducing-ai-for-hiring-the-power-of-chat-gpt-in-recruitment/",
+      "destination": "/blog/ai-for-hiring-chatgpt.html",
+      "permanent": true
+    },
+    {
+      "source": "/level-up-your-product-team-with-talhives-recruitment-expertise",
+      "destination": "/blog/product-team-recruitment.html",
+      "permanent": true
+    },
+    {
+      "source": "/level-up-your-product-team-with-talhives-recruitment-expertise/",
+      "destination": "/blog/product-team-recruitment.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer-solutions-usa/best-executive-search-firms-in-chicago",
+      "destination": "/usa/executive-search.htmlchicago.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer-solutions-usa/best-executive-search-firms-in-chicago/",
+      "destination": "/usa/executive-search.htmlchicago.html",
+      "permanent": true
+    },
+    {
+      "source": "/how-chat-gpt-is-revolutionizing-recruitment-a-detailed-guide",
+      "destination": "/blog/chatgpt-revolutionizing-recruitment.html",
+      "permanent": true
+    },
+    {
+      "source": "/how-chat-gpt-is-revolutionizing-recruitment-a-detailed-guide/",
+      "destination": "/blog/chatgpt-revolutionizing-recruitment.html",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-conduct-a-thorough-background-check-on-job-candidates",
+      "destination": "/blog/background-check-candidates.html",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-conduct-a-thorough-background-check-on-job-candidates/",
+      "destination": "/blog/background-check-candidates.html",
+      "permanent": true
+    },
+    {
+      "source": "/the-mobile-developer-jobs-with-the-highest-salaries-in-2024",
+      "destination": "/blog/mobile-developer-salaries.html",
+      "permanent": true
+    },
+    {
+      "source": "/the-mobile-developer-jobs-with-the-highest-salaries-in-2024/",
+      "destination": "/blog/mobile-developer-salaries.html",
+      "permanent": true
+    },
+    {
+      "source": "/unleashing-the-power-of-tech-recruitment-talhives-expertise",
+      "destination": "/blog/tech-recruitment-expertise.html",
+      "permanent": true
+    },
+    {
+      "source": "/unleashing-the-power-of-tech-recruitment-talhives-expertise/",
+      "destination": "/blog/tech-recruitment-expertise.html",
+      "permanent": true
+    },
+    {
+      "source": "/the-rise-of-remote-work-and-its-effect-on-tech-recruitment",
+      "destination": "/blog/remote-work-tech-recruitment.html",
+      "permanent": true
+    },
+    {
+      "source": "/the-rise-of-remote-work-and-its-effect-on-tech-recruitment/",
+      "destination": "/blog/remote-work-tech-recruitment.html",
+      "permanent": true
+    },
+    {
+      "source": "/five-essential-leadership-traits-and-how-to-cultivate-them",
+      "destination": "/blog/essential-leadership-traits.html",
+      "permanent": true
+    },
+    {
+      "source": "/five-essential-leadership-traits-and-how-to-cultivate-them/",
+      "destination": "/blog/essential-leadership-traits.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog-usas-best-startup-recruitment-services-you-should-try",
+      "destination": "/blog/best-startup-recruitment-usa.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog-usas-best-startup-recruitment-services-you-should-try/",
+      "destination": "/blog/best-startup-recruitment-usa.html",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-stay-ahead-of-the-competition-in-talent-acquisition",
+      "destination": "/blog/competitive-talent-acquisition.html",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-stay-ahead-of-the-competition-in-talent-acquisition/",
+      "destination": "/blog/competitive-talent-acquisition.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer-solutions-usa/technology-talent-acquisition-usa",
+      "destination": "/usa/talent-acquisition.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer-solutions-usa/technology-talent-acquisition-usa/",
+      "destination": "/usa/talent-acquisition.html",
+      "permanent": true
+    },
+    {
+      "source": "/chat-gpt-vs-traditional-recruitment-whats-the-difference",
+      "destination": "/blog/chatgpt-vs-traditional-recruitment.html",
+      "permanent": true
+    },
+    {
+      "source": "/chat-gpt-vs-traditional-recruitment-whats-the-difference/",
+      "destination": "/blog/chatgpt-vs-traditional-recruitment.html",
+      "permanent": true
+    },
+    {
+      "source": "/the-future-of-recruitment-chat-gpt-and-ai-powered-hiring",
+      "destination": "/blog/future-of-recruitment-ai.html",
+      "permanent": true
+    },
+    {
+      "source": "/the-future-of-recruitment-chat-gpt-and-ai-powered-hiring/",
+      "destination": "/blog/future-of-recruitment-ai.html",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-write-a-job-description-that-attracts-top-talent",
+      "destination": "/blog/write-job-description.html",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-write-a-job-description-that-attracts-top-talent/",
+      "destination": "/blog/write-job-description.html",
+      "permanent": true
+    },
+    {
+      "source": "/usa-sales-recruitment-agencies-empower-business-growth",
+      "destination": "/blog/usa-sales-recruitment.html",
+      "permanent": true
+    },
+    {
+      "source": "/usa-sales-recruitment-agencies-empower-business-growth/",
+      "destination": "/blog/usa-sales-recruitment.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/technology-hiring/hire-developers-programmers",
+      "destination": "/hire/",
+      "permanent": true
+    },
+    {
+      "source": "/employer/technology-hiring/hire-developers-programmers/",
+      "destination": "/hire/",
+      "permanent": true
+    },
+    {
+      "source": "/link-between-company-culture-and-business-performance",
+      "destination": "/blog/company-culture-performance.html",
+      "permanent": true
+    },
+    {
+      "source": "/link-between-company-culture-and-business-performance/",
+      "destination": "/blog/company-culture-performance.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/talhive-your-global-talent-sourcing-partner",
+      "destination": "/services/global-talent-sourcing.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/talhive-your-global-talent-sourcing-partner/",
+      "destination": "/services/global-talent-sourcing.html",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-use-chat-gpt-for-job-search-hiring-candidates",
+      "destination": "/blog/chatgpt-for-job-search.html",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-use-chat-gpt-for-job-search-hiring-candidates/",
+      "destination": "/blog/chatgpt-for-job-search.html",
+      "permanent": true
+    },
+    {
+      "source": "/top-5-ways-to-upskill-as-a-java-software-developer",
+      "destination": "/blog/upskill-as-java-developer.html",
+      "permanent": true
+    },
+    {
+      "source": "/top-5-ways-to-upskill-as-a-java-software-developer/",
+      "destination": "/blog/upskill-as-java-developer.html",
+      "permanent": true
+    },
+    {
+      "source": "/how-candidate-impersonation-affects-business-2023",
+      "destination": "/blog/candidate-impersonation.html",
+      "permanent": true
+    },
+    {
+      "source": "/how-candidate-impersonation-affects-business-2023/",
+      "destination": "/blog/candidate-impersonation.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer-solutions-usa/product-design-hiring-usa",
+      "destination": "/usa/product-design-hiring.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer-solutions-usa/product-design-hiring-usa/",
+      "destination": "/usa/product-design-hiring.html",
+      "permanent": true
+    },
+    {
+      "source": "/recruitment-agency/recruitment-agency-in-india",
+      "destination": "/india/",
+      "permanent": true
+    },
+    {
+      "source": "/recruitment-agency/recruitment-agency-in-india/",
+      "destination": "/india/",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agencies-in-jammu-kashmir",
+      "destination": "/india/jammu-kashmir.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agencies-in-jammu-kashmir/",
+      "destination": "/india/jammu-kashmir.html",
+      "permanent": true
+    },
+    {
+      "source": "/recruitment-agency/recruitment-agency-in-surat",
+      "destination": "/india/surat.html",
+      "permanent": true
+    },
+    {
+      "source": "/recruitment-agency/recruitment-agency-in-surat/",
+      "destination": "/india/surat.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-andhra-pradesh",
+      "destination": "/india/andhra-pradesh.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-andhra-pradesh/",
+      "destination": "/india/andhra-pradesh.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-madhya-pradesh",
+      "destination": "/india/madhya-pradesh.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-madhya-pradesh/",
+      "destination": "/india/madhya-pradesh.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-uttar-pradesh",
+      "destination": "/india/uttar-pradesh.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-uttar-pradesh/",
+      "destination": "/india/uttar-pradesh.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer-solutions-usa/technology-hiring-usa",
+      "destination": "/usa/technology-hiring.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer-solutions-usa/technology-hiring-usa/",
+      "destination": "/usa/technology-hiring.html",
+      "permanent": true
+    },
+    {
+      "source": "/case-studies/national-basketball-association",
+      "destination": "/case-studies/nba.html",
+      "permanent": true
+    },
+    {
+      "source": "/case-studies/national-basketball-association/",
+      "destination": "/case-studies/nba.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-chhattisgarh",
+      "destination": "/india/chhattisgarh.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-chhattisgarh/",
+      "destination": "/india/chhattisgarh.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agencies-in-bangalore",
+      "destination": "/india/bangalore.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agencies-in-bangalore/",
+      "destination": "/india/bangalore.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-navi-mumbai",
+      "destination": "/india/navi-mumbai.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-navi-mumbai/",
+      "destination": "/india/navi-mumbai.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-maharashtra",
+      "destination": "/india/maharashtra.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-maharashtra/",
+      "destination": "/india/maharashtra.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-west-bengal",
+      "destination": "/india/west-bengal.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-west-bengal/",
+      "destination": "/india/west-bengal.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-uttarakhand",
+      "destination": "/india/uttarakhand.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-uttarakhand/",
+      "destination": "/india/uttarakhand.html",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-assess-and-onboard-remote-employees",
+      "destination": "/blog/onboard-remote-employees.html",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-assess-and-onboard-remote-employees/",
+      "destination": "/blog/onboard-remote-employees.html",
+      "permanent": true
+    },
+    {
+      "source": "/talhive-mumbais-premier-recruitment-agency",
+      "destination": "/blog/talhive-mumbai-recruitment.html",
+      "permanent": true
+    },
+    {
+      "source": "/talhive-mumbais-premier-recruitment-agency/",
+      "destination": "/blog/talhive-mumbai-recruitment.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-coimbatore",
+      "destination": "/india/coimbatore.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-coimbatore/",
+      "destination": "/india/coimbatore.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-tamil-nadu",
+      "destination": "/india/tamil-nadu.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-tamil-nadu/",
+      "destination": "/india/tamil-nadu.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-chandigarh",
+      "destination": "/india/chandigarh.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-chandigarh/",
+      "destination": "/india/chandigarh.html",
+      "permanent": true
+    },
+    {
+      "source": "/tech-recruitment-challenges-and-solutions",
+      "destination": "/blog/tech-recruitment-challenges.html",
+      "permanent": true
+    },
+    {
+      "source": "/tech-recruitment-challenges-and-solutions/",
+      "destination": "/blog/tech-recruitment-challenges.html",
+      "permanent": true
+    },
+    {
+      "source": "/case-studies/talhive-khatabook-case-study",
+      "destination": "/case-studies/khatabook.html",
+      "permanent": true
+    },
+    {
+      "source": "/case-studies/talhive-khatabook-case-study/",
+      "destination": "/case-studies/khatabook.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/benefits-of-recruitment-partner",
+      "destination": "/services/why-talhive.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/benefits-of-recruitment-partner/",
+      "destination": "/services/why-talhive.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-new-delhi",
+      "destination": "/india/delhi.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-new-delhi/",
+      "destination": "/india/delhi.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-hyderabad",
+      "destination": "/india/hyderabad.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-hyderabad/",
+      "destination": "/india/hyderabad.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-ahmedabad",
+      "destination": "/india/ahmedabad.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-ahmedabad/",
+      "destination": "/india/ahmedabad.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-karnataka",
+      "destination": "/india/karnataka.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-karnataka/",
+      "destination": "/india/karnataka.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-rajasthan",
+      "destination": "/india/rajasthan.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-rajasthan/",
+      "destination": "/india/rajasthan.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/senior-executive-hiring-agency",
+      "destination": "/services/executive-search.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/senior-executive-hiring-agency/",
+      "destination": "/services/executive-search.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-vadodara",
+      "destination": "/india/vadodara.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-vadodara/",
+      "destination": "/india/vadodara.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-calcutta",
+      "destination": "/india/west-bengal.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-calcutta/",
+      "destination": "/india/west-bengal.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-guwahati",
+      "destination": "/india/guwahati.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-guwahati/",
+      "destination": "/india/guwahati.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-gurgaon",
+      "destination": "/india/gurgaon.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-gurgaon/",
+      "destination": "/india/gurgaon.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-chennai",
+      "destination": "/india/chennai.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-chennai/",
+      "destination": "/india/chennai.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-gujarat",
+      "destination": "/india/gujarat.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-gujarat/",
+      "destination": "/india/gujarat.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-lucknow",
+      "destination": "/india/lucknow.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-lucknow/",
+      "destination": "/india/lucknow.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-haryana",
+      "destination": "/india/haryana.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-haryana/",
+      "destination": "/india/haryana.html",
+      "permanent": true
+    },
+    {
+      "source": "/recruitment-agency-in-himachal-pradesh",
+      "destination": "/india/himachal-pradesh.html",
+      "permanent": true
+    },
+    {
+      "source": "/recruitment-agency-in-himachal-pradesh/",
+      "destination": "/india/himachal-pradesh.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-mumbai",
+      "destination": "/india/mumbai.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-mumbai/",
+      "destination": "/india/mumbai.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-kerala",
+      "destination": "/india/kerala.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-kerala/",
+      "destination": "/india/kerala.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-punjab",
+      "destination": "/india/punjab.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-punjab/",
+      "destination": "/india/punjab.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-odisha",
+      "destination": "/india/odisha.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-odisha/",
+      "destination": "/india/odisha.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-delhi",
+      "destination": "/india/delhi.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-delhi/",
+      "destination": "/india/delhi.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-noida",
+      "destination": "/india/noida.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-noida/",
+      "destination": "/india/noida.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-bihar",
+      "destination": "/india/bihar.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-bihar/",
+      "destination": "/india/bihar.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-assam",
+      "destination": "/india/assam.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-assam/",
+      "destination": "/india/assam.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-pune",
+      "destination": "/india/pune.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/recruitment-agency-in-pune/",
+      "destination": "/india/pune.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/product-and-design-hiring",
+      "destination": "/solutions/product-design-hiring.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/product-and-design-hiring/",
+      "destination": "/solutions/product-design-hiring.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/marketing-revenue-hiring",
+      "destination": "/solutions/marketing-sales-hiring.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/marketing-revenue-hiring/",
+      "destination": "/solutions/marketing-sales-hiring.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/executive-hiring-agency",
+      "destination": "/services/executive-search.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/executive-hiring-agency/",
+      "destination": "/services/executive-search.html",
+      "permanent": true
+    },
+    {
+      "source": "/recruitment-agency-in-jharkhand",
+      "destination": "/india/jharkhand.html",
+      "permanent": true
+    },
+    {
+      "source": "/recruitment-agency-in-jharkhand/",
+      "destination": "/india/jharkhand.html",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-evaluate-remote-work",
+      "destination": "/blog/how-to-evaluate-remote-work.html",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-evaluate-remote-work/",
+      "destination": "/blog/how-to-evaluate-remote-work.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/technology-hiring",
+      "destination": "/solutions/technology-hiring.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/technology-hiring/",
+      "destination": "/solutions/technology-hiring.html",
+      "permanent": true
+    },
+    {
+      "source": "/talent-acquisition-agency",
+      "destination": "/services/talent-acquisition.html",
+      "permanent": true
+    },
+    {
+      "source": "/talent-acquisition-agency/",
+      "destination": "/services/talent-acquisition.html",
+      "permanent": true
+    },
+    {
+      "source": "/improving-company-cluture",
+      "destination": "/blog/improving-company-culture.html",
+      "permanent": true
+    },
+    {
+      "source": "/improving-company-cluture/",
+      "destination": "/blog/improving-company-culture.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/staffing-agency",
+      "destination": "/services/staffing.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer/staffing-agency/",
+      "destination": "/services/staffing.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer-solutions-usa",
+      "destination": "/usa/",
+      "permanent": true
+    },
+    {
+      "source": "/employer-solutions-usa/",
+      "destination": "/usa/",
+      "permanent": true
+    },
+    {
+      "source": "/remote-job-scams-2023",
+      "destination": "/blog/remote-job-scams.html",
+      "permanent": true
+    },
+    {
+      "source": "/remote-job-scams-2023/",
+      "destination": "/blog/remote-job-scams.html",
+      "permanent": true
+    },
+    {
+      "source": "/recruitment-agency",
+      "destination": "/services/",
+      "permanent": true
+    },
+    {
+      "source": "/recruitment-agency/",
+      "destination": "/services/",
+      "permanent": true
+    },
+    {
+      "source": "/contact-us",
+      "destination": "/contact.html",
+      "permanent": true
+    },
+    {
+      "source": "/contact-us/",
+      "destination": "/contact.html",
+      "permanent": true
+    },
+    {
+      "source": "/candidate",
+      "destination": "/for-candidates.html",
+      "permanent": true
+    },
+    {
+      "source": "/candidate/",
+      "destination": "/for-candidates.html",
+      "permanent": true
+    },
+    {
+      "source": "/about-us",
+      "destination": "/about.html",
+      "permanent": true
+    },
+    {
+      "source": "/about-us/",
+      "destination": "/about.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer",
+      "destination": "/services/",
+      "permanent": true
+    },
+    {
+      "source": "/employer/",
+      "destination": "/services/",
+      "permanent": true
+    },
+    {
+      "source": "/blogs",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/us",
+      "destination": "/usa/",
+      "permanent": true
+    },
+    {
+      "source": "/us/",
+      "destination": "/usa/",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "geolocation=(), microphone=()"
+        }
+      ]
+    },
+    {
+      "source": "/global.css",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/components.js",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ]
+}
