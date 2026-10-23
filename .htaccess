@@ -1,0 +1,674 @@
+# Talhive .htaccess — 2026-05-22 (v5)
+# 100 standalone HTML files + 378 legacy URL redirects
+# Pretty URLs without .html extension
+
+DirectoryIndex index.html
+RewriteEngine On
+
+# ── Canonical host: 301 non-www -> www, and http -> https (avoids duplicate 200 hosts) ──
+RewriteCond %{HTTP_HOST} !^www\.talhive\.com$ [NC]
+RewriteRule ^ https://www.talhive.com%{REQUEST_URI} [L,R=301]
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^ https://www.talhive.com%{REQUEST_URI} [L,R=301]
+
+
+# ╔══════════════════════════════════════════════════════════════════╗
+# ║ STEP 1: 301 REDIRECTS — Legacy URLs from old WordPress site      ║
+# ║ MUST come before rewrite rules so old URLs don't try to serve    ║
+# ║ as new URLs. Generated 2026-05-22 from GSC URL backup.           ║
+# ║ 323 RedirectMatch rules covering 378 unique legacy URLs.         ║
+# ╚══════════════════════════════════════════════════════════════════╝
+
+# === HIGH-TRAFFIC INDIVIDUAL REDIRECTS (53 URLs, sorted by clicks) ===
+
+# 4592 clicks: /about-us/ → /about
+RedirectMatch 301 ^/about-us/?$  /about
+
+# ---- Legacy URLs from Search Console, 18 Sep 2026 (URLs with impressions and no existing rule) ----
+RedirectMatch 301 ^/employer-solutions-usa/executive-search-recruiter-and-headhunters-in-chicago(\.html|/?)$  /executive-search
+RedirectMatch 301 ^/employer-solutions-usa/best-executive-search-firms-in-chicago(\.html|/?)$  /executive-search
+RedirectMatch 301 ^/hire/blockchain-developers(\.html|/?)$  /engineering-ai-hiring
+RedirectMatch 301 ^/employer-solutions-usa/executive-search-recruiter-and-headhunters-in-washington-dc(\.html|/?)$  /executive-search
+RedirectMatch 301 ^/india/tamil-nadu(\.html|/?)$  /recruitment-agency-chennai
+RedirectMatch 301 ^/india/karnataka(\.html|/?)$  /recruitment-agency-bangalore
+RedirectMatch 301 ^/employer/technology-hiring/hire-developers-programmers/hire-sql-developer(\.html|/?)$  /hire/backend-engineers-india
+RedirectMatch 301 ^/hire/java-developers(\.html|/?)$  /hire/backend-engineers-india
+RedirectMatch 301 ^/hire/sql-developers(\.html|/?)$  /hire/backend-engineers-india
+RedirectMatch 301 ^/india/uttar-pradesh(\.html|/?)$  /recruitment-agency-delhi-ncr
+RedirectMatch 301 ^/employer/recruitment-agency-in-maharashtra(\.html|/?)$  /recruitment-agency-mumbai
+RedirectMatch 301 ^/hire/sql-developers(\.html|/?)$  /hire/backend-engineers-india
+RedirectMatch 301 ^/india/jammu-kashmir(\.html|/?)$  /engineering-ai-hiring
+RedirectMatch 301 ^/india/gujarat(\.html|/?)$  /engineering-ai-hiring
+RedirectMatch 301 ^/india/maharashtra(\.html|/?)$  /recruitment-agency-mumbai
+RedirectMatch 301 ^/hire/laravel-developers(\.html|/?)$  /hire/backend-engineers-india
+RedirectMatch 301 ^/india/west-bengal(\.html|/?)$  /engineering-ai-hiring
+RedirectMatch 301 ^/case-studies/plotx(\.html|/?)$  /case-studies
+RedirectMatch 301 ^/india/andhra-pradesh(\.html|/?)$  /engineering-ai-hiring
+RedirectMatch 301 ^/india/madhya-pradesh(\.html|/?)$  /engineering-ai-hiring
+RedirectMatch 301 ^/employer/recruitment-agency-in-telangana(\.html|/?)$  /recruitment-agency-hyderabad
+RedirectMatch 301 ^/india/punjab(\.html|/?)$  /engineering-ai-hiring
+RedirectMatch 301 ^/india/maharashtra(\.html|/?)$  /recruitment-agency-mumbai
+RedirectMatch 301 ^/india/bihar(\.html|/?)$  /engineering-ai-hiring
+RedirectMatch 301 ^/employer/recruitment-agency-in-lucknow(\.html|/?)$  /engineering-ai-hiring
+RedirectMatch 301 ^/india/west-bengal(\.html|/?)$  /engineering-ai-hiring
+RedirectMatch 301 ^/india/jammu-kashmir(\.html|/?)$  /engineering-ai-hiring
+RedirectMatch 301 ^/india/guwahati(\.html|/?)$  /engineering-ai-hiring
+RedirectMatch 301 ^/employer/recruitment-agency-in-ahmedabad(\.html|/?)$  /engineering-ai-hiring
+RedirectMatch 301 ^/case-studies/plotx(\.html|/?)$  /case-studies
+RedirectMatch 301 ^/employer/recruitment-agency-in-calcutta(\.html|/?)$  /engineering-ai-hiring
+RedirectMatch 301 ^/case-studies/savii(\.html|/?)$  /case-studies
+RedirectMatch 301 ^/india/himachal-pradesh(\.html|/?)$  /engineering-ai-hiring
+RedirectMatch 301 ^/india/jharkhand(\.html|/?)$  /engineering-ai-hiring
+RedirectMatch 301 ^/india/uttarakhand(\.html|/?)$  /engineering-ai-hiring
+RedirectMatch 301 ^/india/chandigarh(\.html|/?)$  /engineering-ai-hiring
+RedirectMatch 301 ^/india/tamil-nadu(\.html|/?)$  /recruitment-agency-chennai
+RedirectMatch 301 ^/india/chhattisgarh(\.html|/?)$  /engineering-ai-hiring
+RedirectMatch 301 ^/india/rajasthan(\.html|/?)$  /engineering-ai-hiring
+RedirectMatch 301 ^/case-studies/avaana(\.html|/?)$  /case-studies
+RedirectMatch 301 ^/india/odisha(\.html|/?)$  /engineering-ai-hiring
+RedirectMatch 301 ^/employer/recruitment-agency-in-rajasthan(\.html|/?)$  /engineering-ai-hiring
+RedirectMatch 301 ^/employer/recruitment-agency-in-guwahati(\.html|/?)$  /engineering-ai-hiring
+RedirectMatch 301 ^/employer/recruitment-agency-in-uttar-pradesh(\.html|/?)$  /recruitment-agency-delhi-ncr
+RedirectMatch 301 ^/india/assam(\.html|/?)$  /engineering-ai-hiring
+RedirectMatch 301 ^/case-studies/avaana(\.html|/?)$  /case-studies
+RedirectMatch 301 ^/india/odisha(\.html|/?)$  /engineering-ai-hiring
+RedirectMatch 301 ^/employer/senior-executive-hiring-agency(\.html|/?)$  /executive-search
+RedirectMatch 301 ^/employer/executive-hiring-agency(\.html|/?)$  /executive-search
+RedirectMatch 301 ^/employer/technology-hiring/hire-developers-programmers/hire-software-developer(\.html|/?)$  /hire/backend-engineers-india
+RedirectMatch 301 ^/employer/hire-developers-programmers/hire-php-developer(\.html|/?)$  /hire/backend-engineers-india
+RedirectMatch 301 ^/employer/technology-hiring/hire-developers-programmers/hire-wordpress-developer(\.html|/?)$  /hire/backend-engineers-india
+RedirectMatch 301 ^/employer/technology-hiring/hire-developers-programmers/hire-blockchain-developers(\.html|/?)$  /engineering-ai-hiring
+RedirectMatch 301 ^/employer/technology-hiring__trashed/hire-developers-programmers/hire-cybersecurity-experts(\.html|/?)$  /hire/cybersecurity-engineers-india
+RedirectMatch 301 ^/employer/talhive-your-global-talent-sourcing-partner(\.html|/?)$  /about
+RedirectMatch 301 ^/blogs(\.html|/?)$  /blog
+RedirectMatch 301 ^/recruitment-agency/recruitment-agency-in-india-2(\.html|/?)$  /engineering-ai-hiring
+RedirectMatch 301 ^/employer/hiring-challenges(\.html|/?)$  /blog/challenges-in-tech-hiring
+RedirectMatch 301 ^/recruitment-agency-vs-in-house-recruitment-which-is-right-for-you(\.html|/?)$  /blog/embedded-recruiter-vs-agency-vs-inhouse-cost
+RedirectMatch 301 ^/hire/game-developers(\.html|/?)$  /engineering-ai-hiring
+
+# 115 clicks: /employer/recruitment-agencies-in-bangalore/ → /recruitment-agency-bangalore
+RedirectMatch 301 ^/employer/recruitment-agencies-in-bangalore/?$  /recruitment-agency-bangalore
+
+# 111 clicks: /employer/product-and-design-hiring/ → /product-hiring
+RedirectMatch 301 ^/employer/product-and-design-hiring/?$  /product-hiring
+
+# 91 clicks: /millennials-plus-technology-navigating-the-good-the-bad-and-the-awkward/ → /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/millennials-plus-technology-navigating-the-good-the-bad-and-the-awkward/?$  /insights/india-tech-hiring-market-map
+
+# 87 clicks: /jobs/ → /
+RedirectMatch 301 ^/jobs/?$  /
+
+# 83 clicks: /employer/recruitment-agency-in-gurgaon/ → /recruitment-agency-delhi-ncr
+RedirectMatch 301 ^/employer/recruitment-agency-in-gurgaon/?$  /recruitment-agency-delhi-ncr
+
+# 79 clicks: /employer/recruitment-agency-in-mumbai/ → /recruitment-agency-mumbai
+RedirectMatch 301 ^/employer/recruitment-agency-in-mumbai/?$  /recruitment-agency-mumbai
+
+# 69 clicks: /contact-us/ → /contact
+RedirectMatch 301 ^/contact-us/?$  /contact
+
+# 43 clicks: /employer/recruitment-agency-in-kerala/ → /recruitment-agency-kochi
+RedirectMatch 301 ^/employer/recruitment-agency-in-kerala/?$  /recruitment-agency-kochi
+
+
+# Case study pages
+RewriteRule ^work/loopio-india-tech-hiring/?$ loopio-india-tech-hiring.html [L]
+RewriteRule ^work/ketteq-technology-product-hiring/?$ ketteq-technology-product-hiring.html [L]
+RewriteRule ^work/arya-ai-technology-hiring/?$ arya-ai-technology-hiring.html [L]
+# 36 clicks: /case-studies/writesonic/ → /work/writesonic-ai-engineers
+RedirectMatch 301 ^/case-studies/writesonic/?$  /work/writesonic-ai-engineers
+
+# 28 clicks: /employer-solutions-usa/ → /us-companies-hiring-in-india
+RedirectMatch 301 ^/employer-solutions-usa/?$  /us-companies-hiring-in-india
+
+# 28 clicks: /employer/recruitment-agency-in-andhra-pradesh/ → /recruitment-agency-hyderabad
+RedirectMatch 301 ^/employer/recruitment-agency-in-andhra-pradesh/?$  /recruitment-agency-hyderabad
+
+# 27 clicks: /employer-solutions-usa/technology-hiring-usa/ → /us-companies-hiring-in-india
+RedirectMatch 301 ^/employer-solutions-usa/technology-hiring-usa/?$  /us-companies-hiring-in-india
+
+# 26 clicks: /employer/recruitment-agency-in-pune/ → /recruitment-agency-pune
+RedirectMatch 301 ^/employer/recruitment-agency-in-pune/?$  /recruitment-agency-pune
+
+# 24 clicks: /top-5-ways-to-upskill-as-a-java-software-developer/ → /hire/backend-engineers-india
+RedirectMatch 301 ^/top-5-ways-to-upskill-as-a-java-software-developer/?$  /hire/backend-engineers-india
+
+# 20 clicks: /employer/marketing-revenue-hiring/ → /executive-search
+RedirectMatch 301 ^/employer/marketing-revenue-hiring/?$  /executive-search
+
+# 18 clicks: /employer/recruitment-agency-in-hyderabad/ → /recruitment-agency-hyderabad
+RedirectMatch 301 ^/employer/recruitment-agency-in-hyderabad/?$  /recruitment-agency-hyderabad
+
+# 18 clicks: /employer/recruitment-agency-in-tamil-nadu/ → /recruitment-agency-chennai
+RedirectMatch 301 ^/employer/recruitment-agency-in-tamil-nadu/?$  /recruitment-agency-chennai
+
+# 17 clicks: /employer/recruitment-agency-in-delhi/ → /recruitment-agency-delhi-ncr
+RedirectMatch 301 ^/employer/recruitment-agency-in-delhi/?$  /recruitment-agency-delhi-ncr
+
+# 16 clicks: /employer-solutions-usa/product-design-hiring-usa/ → /product-hiring
+RedirectMatch 301 ^/employer-solutions-usa/product-design-hiring-usa/?$  /product-hiring
+
+# 16 clicks: /employer/recruitment-agency-in-coimbatore/ → /recruitment-agency-coimbatore
+RedirectMatch 301 ^/employer/recruitment-agency-in-coimbatore/?$  /recruitment-agency-coimbatore
+
+# 15 clicks: /recruitment-agency/recruitment-agency-in-india/ → /executive-search
+RedirectMatch 301 ^/recruitment-agency/recruitment-agency-in-india/?$  /executive-search
+
+# 14 clicks: /employer/technology-hiring/hire-developers-programmers/hire-laravel-developer/ → /hire/backend-engineers-india
+RedirectMatch 301 ^/employer/technology-hiring/hire-developers-programmers/hire-laravel-developer/?$  /hire/backend-engineers-india
+
+# 14 clicks: /employer/recruitment-agency-in-chennai/ → /recruitment-agency-chennai
+RedirectMatch 301 ^/employer/recruitment-agency-in-chennai/?$  /recruitment-agency-chennai
+
+# 13 clicks: /employer/recruitment-agency-in-navi-mumbai/ → /recruitment-agency-mumbai
+RedirectMatch 301 ^/employer/recruitment-agency-in-navi-mumbai/?$  /recruitment-agency-mumbai
+
+# 12 clicks: /using-chat-gpt-to-prepare-for-job-interviews-a-comprehensive-guide/ → /hire/ai-engineers-india
+RedirectMatch 301 ^/using-chat-gpt-to-prepare-for-job-interviews-a-comprehensive-guide/?$  /hire/ai-engineers-india
+
+# 12 clicks: /employer/recruitment-agency-in-noida/ → /recruitment-agency-noida
+RedirectMatch 301 ^/employer/recruitment-agency-in-noida/?$  /recruitment-agency-noida
+
+# 12 clicks: /employer/recruitment-agency-in-bihar/ → /recruitment-agency-delhi-ncr
+RedirectMatch 301 ^/employer/recruitment-agency-in-bihar/?$  /recruitment-agency-delhi-ncr
+
+# 9 clicks: /india/bangalore/ → /recruitment-agency-bangalore
+RedirectMatch 301 ^/india/bangalore/?$  /recruitment-agency-bangalore
+
+# 9 clicks: /employer/recruitment-agencies-in-jammu-kashmir/ → /recruitment-agency-delhi-ncr
+RedirectMatch 301 ^/employer/recruitment-agencies-in-jammu-kashmir/?$  /recruitment-agency-delhi-ncr
+
+# 9 clicks: /chat-gpt-and-employee-retention-strategies-to-keep-your-best-employees/ → /hire/ai-engineers-india
+RedirectMatch 301 ^/chat-gpt-and-employee-retention-strategies-to-keep-your-best-employees/?$  /hire/ai-engineers-india
+
+# 8 clicks: /employer/technology-hiring/ → /engineering-ai-hiring
+RedirectMatch 301 ^/employer/technology-hiring/?$  /engineering-ai-hiring
+
+# 8 clicks: /employer/ → /executive-search
+RedirectMatch 301 ^/employer/?$  /executive-search
+
+# 7 clicks: /employer/technology-hiring/hire-developers-programmers/hire-ai-engineers/ → /hire/ai-engineers-india
+RedirectMatch 301 ^/employer/technology-hiring/hire-developers-programmers/hire-ai-engineers/?$  /hire/ai-engineers-india
+
+# 7 clicks: /employer/technology-hiring/hire-developers-programmers/hire-game-developer/ → /hire/backend-engineers-india
+RedirectMatch 301 ^/employer/technology-hiring/hire-developers-programmers/hire-game-developer/?$  /hire/backend-engineers-india
+
+# 7 clicks: /employer/recruitment-agency-in-punjab/ → /recruitment-agency-delhi-ncr
+RedirectMatch 301 ^/employer/recruitment-agency-in-punjab/?$  /recruitment-agency-delhi-ncr
+
+# 7 clicks: /employer/recruitment-agency-in-west-bengal/ → /recruitment-agency-delhi-ncr
+RedirectMatch 301 ^/employer/recruitment-agency-in-west-bengal/?$  /recruitment-agency-delhi-ncr
+
+# 7 clicks: /recruitment-agency-in-jharkhand/ → /recruitment-agency-delhi-ncr
+RedirectMatch 301 ^/recruitment-agency-in-jharkhand/?$  /recruitment-agency-delhi-ncr
+
+# 6 clicks: /employer-solutions-usa/technology-talent-acquisition-usa/ → /us-companies-hiring-in-india
+RedirectMatch 301 ^/employer-solutions-usa/technology-talent-acquisition-usa/?$  /us-companies-hiring-in-india
+
+# 6 clicks: /employer/technology-hiring/hire-developers-programmers/hire-data-scientist/ → /hire/data-scientists-india
+RedirectMatch 301 ^/employer/technology-hiring/hire-developers-programmers/hire-data-scientist/?$  /hire/data-scientists-india
+
+# 6 clicks: /talent-acquisition-agency/ → /executive-search
+RedirectMatch 301 ^/talent-acquisition-agency/?$  /executive-search
+
+# 6 clicks: /employer/recruitment-agency-in-karnataka/ → /recruitment-agency-bangalore
+RedirectMatch 301 ^/employer/recruitment-agency-in-karnataka/?$  /recruitment-agency-bangalore
+
+# 6 clicks: /case-studies/talhive-khatabook-case-study/ → /case-studies
+RedirectMatch 301 ^/case-studies/talhive-khatabook-case-study/?$  /case-studies
+
+# 6 clicks: /solutions/product-design-hiring.html → /product-hiring
+RedirectMatch 301 ^/solutions/product-design-hiring\.html/?$  /product-hiring
+
+# 6 clicks: /employer/recruitment-agency-in-gujarat/ → /recruitment-agency-mumbai
+RedirectMatch 301 ^/employer/recruitment-agency-in-gujarat/?$  /recruitment-agency-mumbai
+
+# 6 clicks: /recruitment-agency-in-himachal-pradesh/ → /recruitment-agency-delhi-ncr
+RedirectMatch 301 ^/recruitment-agency-in-himachal-pradesh/?$  /recruitment-agency-delhi-ncr
+
+# 5 clicks: /employer/recruitment-agency-in-vadodara/ → /recruitment-agency-mumbai
+RedirectMatch 301 ^/employer/recruitment-agency-in-vadodara/?$  /recruitment-agency-mumbai
+
+# 5 clicks: /employer/recruitment-agency-in-madhya-pradesh/ → /recruitment-agency-mumbai
+RedirectMatch 301 ^/employer/recruitment-agency-in-madhya-pradesh/?$  /recruitment-agency-mumbai
+
+# 5 clicks: /case-studies/national-basketball-association/ → /work/nba-india-team-build
+RedirectMatch 301 ^/case-studies/national-basketball-association/?$  /work/nba-india-team-build
+
+# 5 clicks: /employer/recruitment-agency-in-new-delhi/ → /recruitment-agency-delhi-ncr
+RedirectMatch 301 ^/employer/recruitment-agency-in-new-delhi/?$  /recruitment-agency-delhi-ncr
+
+# 5 clicks: /employer/recruitment-agency-in-odisha/ → /recruitment-agency-delhi-ncr
+RedirectMatch 301 ^/employer/recruitment-agency-in-odisha/?$  /recruitment-agency-delhi-ncr
+
+# 5 clicks: /employer/recruitment-agency-in-assam/ → /recruitment-agency-delhi-ncr
+RedirectMatch 301 ^/employer/recruitment-agency-in-assam/?$  /recruitment-agency-delhi-ncr
+
+# 5 clicks: /employer/recruitment-agency-in-uttarakhand/ → /recruitment-agency-delhi-ncr
+RedirectMatch 301 ^/employer/recruitment-agency-in-uttarakhand/?$  /recruitment-agency-delhi-ncr
+
+# === PATTERN-BASED REDIRECTS ===
+
+# Old recruitment agency in {city} patterns → new city pages
+RedirectMatch 301 ^/employer/recruitment-agenc(?:y|ies)-in-bangalore/?$  /recruitment-agency-bangalore
+RedirectMatch 301 ^/employer/recruitment-agenc(?:y|ies)-in-mumbai/?$  /recruitment-agency-mumbai
+RedirectMatch 301 ^/employer/recruitment-agenc(?:y|ies)-in-pune/?$  /recruitment-agency-pune
+RedirectMatch 301 ^/employer/recruitment-agenc(?:y|ies)-in-hyderabad/?$  /recruitment-agency-hyderabad
+RedirectMatch 301 ^/employer/recruitment-agenc(?:y|ies)-in-chennai/?$  /recruitment-agency-chennai
+RedirectMatch 301 ^/employer/recruitment-agenc(?:y|ies)-in-coimbatore/?$  /recruitment-agency-coimbatore
+RedirectMatch 301 ^/employer/recruitment-agenc(?:y|ies)-in-noida/?$  /recruitment-agency-noida
+RedirectMatch 301 ^/employer/recruitment-agenc(?:y|ies)-in-kerala/?$  /recruitment-agency-kochi
+# Delhi NCR consolidation
+RedirectMatch 301 ^/employer/recruitment-agenc(?:y|ies)-in-(delhi|new-delhi|gurgaon|noida|haryana|punjab|chandigarh|uttar-pradesh|bihar|jharkhand|west-bengal|assam|guwahati|jammu-kashmir|himachal-pradesh|uttarakhand|rajasthan|lucknow|calcutta|kolkata|odisha)/?$  /recruitment-agency-delhi-ncr
+# Mumbai consolidation
+RedirectMatch 301 ^/employer/recruitment-agenc(?:y|ies)-in-(navi-mumbai|maharashtra|gujarat|ahmedabad|vadodara|surat|madhya-pradesh|chhattisgarh)/?$  /recruitment-agency-mumbai
+# Hyderabad consolidation
+RedirectMatch 301 ^/employer/recruitment-agenc(?:y|ies)-in-(andhra-pradesh|telangana)/?$  /recruitment-agency-hyderabad
+# Chennai consolidation
+RedirectMatch 301 ^/employer/recruitment-agenc(?:y|ies)-in-(tamil-nadu|karnataka)/?$  /recruitment-agency-chennai
+
+# /india/{city}/ legacy structure
+RedirectMatch 301 ^/india/bangalore(\.html|/?)$  /recruitment-agency-bangalore
+RedirectMatch 301 ^/india/mumbai(\.html|/?)$  /recruitment-agency-mumbai
+RedirectMatch 301 ^/india/pune(\.html|/?)$  /recruitment-agency-pune
+RedirectMatch 301 ^/india/hyderabad(\.html|/?)$  /recruitment-agency-hyderabad
+RedirectMatch 301 ^/india/chennai(\.html|/?)$  /recruitment-agency-chennai
+RedirectMatch 301 ^/india/coimbatore(\.html|/?)$  /recruitment-agency-coimbatore
+RedirectMatch 301 ^/india/noida(\.html|/?)$  /recruitment-agency-noida
+RedirectMatch 301 ^/india/kerala(\.html|/?)$  /recruitment-agency-kochi
+RedirectMatch 301 ^/india/delhi(\.html|/?)$  /recruitment-agency-delhi-ncr
+RedirectMatch 301 ^/india/gurgaon(\.html|/?)$  /recruitment-agency-delhi-ncr
+RedirectMatch 301 ^/india/navi-mumbai(\.html|/?)$  /recruitment-agency-mumbai
+RedirectMatch 301 ^/india/ahmedabad(\.html|/?)$  /recruitment-agency-mumbai
+RedirectMatch 301 ^/india/vadodara(\.html|/?)$  /recruitment-agency-mumbai
+RedirectMatch 301 ^/india/surat(\.html|/?)$  /recruitment-agency-mumbai
+RedirectMatch 301 ^/india/lucknow(\.html|/?)$  /recruitment-agency-delhi-ncr
+RedirectMatch 301 ^/india/(tamil-nadu|karnataka|chennai)(\.html|/?)$  /recruitment-agency-chennai
+RedirectMatch 301 ^/india/(andhra-pradesh|telangana)(\.html|/?)$  /recruitment-agency-hyderabad
+RedirectMatch 301 ^/india/(maharashtra|gujarat|madhya-pradesh|chhattisgarh)(\.html|/?)$  /recruitment-agency-mumbai
+RedirectMatch 301 ^/india/(uttar-pradesh|bihar|jharkhand|west-bengal|odisha|assam|himachal-pradesh|uttarakhand|rajasthan|jammu-kashmir|punjab|haryana)(\.html|/?)$  /recruitment-agency-delhi-ncr
+RedirectMatch 301 ^/india/?$  /executive-search
+
+# Old /employer/technology-hiring/.../hire-X/ → new /hire/X-india pages
+RedirectMatch 301 ^/employer/technology-hiring(?:__trashed)?/hire-developers-programmers/hire-ai-engineers/?$  /hire/ai-engineers-india
+RedirectMatch 301 ^/employer/technology-hiring(?:__trashed)?/hire-developers-programmers/hire-machine-learning-engineers/?$  /hire/machine-learning-engineers-india
+RedirectMatch 301 ^/employer/technology-hiring(?:__trashed)?/hire-developers-programmers/hire-data-scientist/?$  /hire/data-scientists-india
+RedirectMatch 301 ^/employer/technology-hiring(?:__trashed)?/hire-developers-programmers/hire-data-engineers/?$  /hire/data-engineers-india
+RedirectMatch 301 ^/employer/technology-hiring(?:__trashed)?/hire-developers-programmers/hire-android-app-developer/?$  /hire/android-engineers-india
+RedirectMatch 301 ^/employer/technology-hiring(?:__trashed)?/hire-developers-programmers/hire-cybersecurity-experts/?$  /hire/cybersecurity-engineers-india
+# Backend-family roles consolidated
+RedirectMatch 301 ^/employer/technology-hiring(?:__trashed)?/hire-developers-programmers/hire-(laravel|php|java|dot-net|software|web|sql|wordpress|blockchain|game)-(developer|developers)/?$  /hire/backend-engineers-india
+RedirectMatch 301 ^/employer/hire-developers-programmers/hire-(laravel|php|java|dot-net|software|web|sql|wordpress|blockchain|game)-(developer|developers)/?$  /hire/backend-engineers-india
+# /employer/technology-hiring root paths
+RedirectMatch 301 ^/employer/technology-hiring/?$  /engineering-ai-hiring
+RedirectMatch 301 ^/employer/technology-hiring/hire-developers-programmers/?$  /engineering-ai-hiring
+
+# /hire/X.html legacy → new /hire/X-india
+RedirectMatch 301 ^/hire/ai-engineers(\.html|/?)$  /hire/ai-engineers-india
+RedirectMatch 301 ^/hire/data-engineers(\.html|/?)$  /hire/data-engineers-india
+RedirectMatch 301 ^/hire/data-scientists(\.html|/?)$  /hire/data-scientists-india
+RedirectMatch 301 ^/hire/machine-learning-engineers(\.html|/?)$  /hire/machine-learning-engineers-india
+RedirectMatch 301 ^/hire/android-developers(\.html|/?)$  /hire/android-engineers-india
+RedirectMatch 301 ^/hire/(sql|java|blockchain|game|laravel|wordpress)-developers(\.html|/?)$  /hire/backend-engineers-india
+RedirectMatch 301 ^/hire/?$  /engineering-ai-hiring
+
+# Old case studies
+RedirectMatch 301 ^/case-studies/writesonic(\.html|/?)$  /work/writesonic-ai-engineers
+RedirectMatch 301 ^/case-studies/(national-basketball-association|nba)(\.html|/?)$  /work/nba-india-team-build
+RedirectMatch 301 ^/case-studies/(talhive-khatabook-case-study|khatabook|plotx|avaana|savii|gradiant-india|s4s)(\.html|/?)$  /case-studies
+# Strip trailing slash from /case-studies/ → /case-studies (matches ONLY with slash, not bare URL)
+RedirectMatch 301 ^/case-studies/$  /case-studies
+RedirectMatch 301 ^/case-study/?$  /case-studies
+
+# Canonicalize case study URLs to /work/<slug> (matches the <link rel="canonical">
+# Google may have indexed the root-level versions before sitemap was corrected — these 301s consolidate to canonical.
+RedirectMatch 301 ^/writesonic-ai-engineers/?$         /work/writesonic-ai-engineers
+RedirectMatch 301 ^/nba-india-team-build/?$            /work/nba-india-team-build
+RedirectMatch 301 ^/gcc-climate-fintech/?$             /case-studies
+RedirectMatch 301 ^/work/gcc-climate-fintech/?$        /case-studies
+RedirectMatch 301 ^/rpo-logistics-engineering/?$       /work/rpo-logistics-engineering
+RedirectMatch 301 ^/vp-engineering-series-b/?$         /work/vp-engineering-series-b
+
+# Canonicalize insight URLs to /insights/<slug> (matches the <link rel="canonical">
+RedirectMatch 301 ^/india-tech-hiring-market-map/?$                       /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/india-gcc-hiring-playbook/?$                          /insights/india-gcc-hiring-playbook
+RedirectMatch 301 ^/how-us-companies-hire-in-india/?$                     /insights/how-us-companies-hire-in-india
+RedirectMatch 301 ^/how-european-companies-build-india-teams/?$           /insights/how-european-companies-build-india-teams
+RedirectMatch 301 ^/engineering-hiring-bangalore-vs-pune-vs-hyderabad/?$  /insights/engineering-hiring-bangalore-vs-pune-vs-hyderabad
+RedirectMatch 301 ^/product-hiring-in-india/?$                            /insights/product-hiring-in-india
+RedirectMatch 301 ^/design-hiring-in-india/?$                             /insights/design-hiring-in-india
+
+# USA company / employer-solutions-usa paths
+RedirectMatch 301 ^/employer-solutions-usa/(executive-search-recruiter-and-headhunters-in-chicago|best-executive-search-firms-in-chicago)/?$  /chicago-companies-hiring-in-india
+RedirectMatch 301 ^/employer-solutions-usa/(executive-search-recruiter-and-headhunters-in-san-francisco)/?$  /san-francisco-companies-hiring-in-india
+RedirectMatch 301 ^/employer-solutions-usa/(executive-search-recruiter-and-headhunters-in-los-angeles|best-executive-search-firms-in-los-angeles)/?$  /los-angeles-companies-hiring-in-india
+RedirectMatch 301 ^/employer-solutions-usa/atlanta-executive-recruiters-and-headhunters/?$  /atlanta-companies-hiring-in-india
+RedirectMatch 301 ^/employer-solutions-usa/new-york-executive-recruiters-and-headhunters/?$  /new-york-companies-hiring-in-india
+RedirectMatch 301 ^/employer-solutions-usa/(product-design-hiring-usa)/?$  /product-hiring
+# All other employer-solutions-usa → /us-companies-hiring-in-india
+RedirectMatch 301 ^/employer-solutions-usa(/.*)?$  /us-companies-hiring-in-india
+RedirectMatch 301 ^/usa/technology-hiring(\.html|/?)$  /us-companies-hiring-in-india
+RedirectMatch 301 ^/usa/product-design-hiring(\.html|/?)$  /product-hiring
+RedirectMatch 301 ^/usa/talent-acquisition/?$  /us-companies-hiring-in-india
+RedirectMatch 301 ^/usa/?$  /us-companies-hiring-in-india
+RedirectMatch 301 ^/us/?$  /us-companies-hiring-in-india
+RedirectMatch 301 ^/uk(\.html|/?)$  /london-companies-hiring-in-india
+
+# Other /employer/ paths
+RedirectMatch 301 ^/employer/product-and-design-hiring/?$  /product-hiring
+RedirectMatch 301 ^/employer/marketing-revenue-hiring/?$  /executive-search
+RedirectMatch 301 ^/employer/staffing-agency/?$  /rpo-embedded-hiring
+RedirectMatch 301 ^/employer/(senior-executive-hiring-agency|executive-hiring-agency)/?$  /executive-search
+RedirectMatch 301 ^/employer/(hiring-challenges|talhive-your-global-talent-sourcing-partner|benefits-of-recruitment-partner)/?$  /about
+RedirectMatch 301 ^/employer/?$  /executive-search
+
+# /services/ paths
+RedirectMatch 301 ^/services/executive-search(\.html|/?)$  /executive-search
+RedirectMatch 301 ^/services/talent-acquisition/?$  /rpo-embedded-hiring
+RedirectMatch 301 ^/services/staffing(\.html|/?)$  /rpo-embedded-hiring
+RedirectMatch 301 ^/services/global-talent-sourcing(\.html|/?)$  /india-team-build
+RedirectMatch 301 ^/services/?$  /executive-search
+# /solutions/ paths
+RedirectMatch 301 ^/solutions/technology-hiring/?$  /engineering-ai-hiring
+RedirectMatch 301 ^/solutions/product-design-hiring(\.html|/?)$  /product-hiring
+RedirectMatch 301 ^/solutions/marketing-sales-hiring(\.html|/?)$  /executive-search
+RedirectMatch 301 ^/solutions/?$  /executive-search
+
+# Old umbrella recruitment-agency paths
+RedirectMatch 301 ^/recruitment-agency/recruitment-agency-in-surat/?$  /recruitment-agency-mumbai
+RedirectMatch 301 ^/recruitment-agency/recruitment-agency-in-india(-2)?/?$  /executive-search
+RedirectMatch 301 ^/recruitment-agency/?$  /executive-search
+RedirectMatch 301 ^/talent-acquisition-agency(/.*)?$  /executive-search
+
+# /recruitment-agency-in-{state}/ root-level paths
+RedirectMatch 301 ^/recruitment-agency-in-jharkhand/?$  /recruitment-agency-delhi-ncr
+RedirectMatch 301 ^/recruitment-agency-in-himachal-pradesh/?$  /recruitment-agency-delhi-ncr
+
+# Blog posts and blog hub
+RedirectMatch 301 ^/blog/ai-for-hiring-chatgpt/?$  /hire/ai-engineers-india
+RedirectMatch 301 ^/blog/chatgpt-employee-retention(\.html|/?)$  /hire/ai-engineers-india
+RedirectMatch 301 ^/blog/it-contracting-jobs-usa(\.html|/?)$  /us-companies-hiring-in-india
+RedirectMatch 301 ^/blog/hiring-tech-talent-startup(\.html|/?)$  /engineering-ai-hiring
+RedirectMatch 301 ^/blog/india-recruitment-hubs(\.html|/?)$  /insights/engineering-hiring-bangalore-vs-pune-vs-hyderabad
+RedirectMatch 301 ^/blog/top-recruitment-agencies-india(\.html|/?)$  /executive-search
+RedirectMatch 301 ^/blog/remote-work-tech-recruitment(\.html|/?)$  /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/blog/tech-recruitment-expertise(\.html|/?)$  /engineering-ai-hiring
+RedirectMatch 301 ^/blog/essential-leadership-traits(\.html|/?)$  /executive-search
+RedirectMatch 301 ^/blog/improving-company-culture(\.html|/?)$  /about
+RedirectMatch 301 ^/blog/product-team-recruitment/?$  /product-hiring
+# Note: /blog and /blog/<slug> are now their own section — rewrites handled in STEP 2
+
+# Old WordPress asset paths → home
+RedirectMatch 301 ^/wp-content/(.*)$  /
+
+# Standalone blog/article URLs
+# 5 legacy URLs → /
+RedirectMatch 301 ^/candidate//?$  /
+RedirectMatch 301 ^/for-candidates//?$  /
+RedirectMatch 301 ^/terms-condition//?$  /
+RedirectMatch 301 ^/for-candidates\.html/?$  /
+RedirectMatch 301 ^/thank-you//?$  /
+
+# 10 legacy URLs → /about
+RedirectMatch 301 ^/about\.html/?$  /about
+RedirectMatch 301 ^/improving-company-cluture//?$  /about
+RedirectMatch 301 ^/link-between-company-culture-and-business-performance//?$  /about
+RedirectMatch 301 ^/the-importance-of-company-culture-for-employee-retention-and-satisfaction//?$  /about
+RedirectMatch 301 ^/the-power-of-people-how-hr-shapes-company-culture-for-success//?$  /about
+RedirectMatch 301 ^/the-connection-between-company-culture-and-employee-engagement//?$  /about
+RedirectMatch 301 ^/building-positive-workplace-culture-tips-and-strategies//?$  /about
+RedirectMatch 301 ^/company-culture-and-employee-engagement-2023//?$  /about
+RedirectMatch 301 ^/about//?$  /about
+RedirectMatch 301 ^/the-benefits-of-a-diverse-and-inclusive-company-culture//?$  /about
+
+# 2 legacy URLs → /assessment
+RedirectMatch 301 ^/how-to-conduct-a-thorough-background-check-on-job-candidates//?$  /assessment
+RedirectMatch 301 ^/technical-interview-preparation-how-to-nail-it-in-2024//?$  /assessment
+
+# 1 legacy URLs → /case-studies
+RedirectMatch 301 ^/case-study//?$  /case-studies
+
+# 2 legacy URLs → /contact
+RedirectMatch 301 ^/contact\.html/?$  /contact
+RedirectMatch 301 ^/contact//?$  /contact
+
+# 6 legacy URLs → /design-hiring
+RedirectMatch 301 ^/visualize-success-uncovering-top-design-talent-through-our-recruitment-process//?$  /design-hiring
+RedirectMatch 301 ^/unlocking-creativity-how-design-recruitment-agencies-can-propel-your-startup//?$  /design-hiring
+RedirectMatch 301 ^/why-talhive-is-the-ultimate-design-recruitment-solution//?$  /design-hiring
+RedirectMatch 301 ^/crafting-the-future-how-usa-design-recruitment-agencies-shape-startups//?$  /design-hiring
+RedirectMatch 301 ^/the-art-of-design-talent-how-usa-design-recruitment-agencies-are-curating-the-best//?$  /design-hiring
+RedirectMatch 301 ^/usa-design-recruitment-for-startups-talhive-impact//?$  /design-hiring
+
+# 21 legacy URLs → /engineering-ai-hiring
+RedirectMatch 301 ^/the-rise-of-remote-work-and-its-effect-on-tech-recruitment//?$  /engineering-ai-hiring
+RedirectMatch 301 ^/tech-recruitment-challenges-and-solutions//?$  /engineering-ai-hiring
+RedirectMatch 301 ^/how-to-secure-top-tech-talent-for-your-startup-in-the-competitive-market//?$  /engineering-ai-hiring
+RedirectMatch 301 ^/unleashing-the-power-of-tech-recruitment-talhives-expertise//?$  /engineering-ai-hiring
+RedirectMatch 301 ^/9-talent-management-metrics-you-need-to-use-to-upscale-tech-recruitment//?$  /engineering-ai-hiring
+RedirectMatch 301 ^/the-secret-sauce-of-usa-tech-recruitment-agencies-in-powering-the-next-big-startups//?$  /engineering-ai-hiring
+RedirectMatch 301 ^/heres-how-to-build-the-perfect-applicant-funnel-to-recruit-top-tech-talent//?$  /engineering-ai-hiring
+RedirectMatch 301 ^/demand-spiked-the-tech-talent-shortage-going-into-2024-heres-why//?$  /engineering-ai-hiring
+RedirectMatch 301 ^/2024-tech-recruitment-landscape-emerging-trends-and-the-role-of-talhive-in-sourcing-top-talent//?$  /engineering-ai-hiring
+RedirectMatch 301 ^/tips-for-finding-and-attracting-top-tech-talent//?$  /engineering-ai-hiring
+RedirectMatch 301 ^/navigating-tech-recruitment-in-the-usa-discover-remote-talent-with-talhive//?$  /engineering-ai-hiring
+RedirectMatch 301 ^/top-tech-recruitment-trends-for-2024-a-comprehensive-look-at-talhives-excellence//?$  /engineering-ai-hiring
+RedirectMatch 301 ^/ultimate-hiring-guide-for-tech-startup//?$  /engineering-ai-hiring
+RedirectMatch 301 ^/talhive-the-premier-tech-recruitment-platform-for-startups//?$  /engineering-ai-hiring
+RedirectMatch 301 ^/secret-formula-for-tech-recruitment-success//?$  /engineering-ai-hiring
+RedirectMatch 301 ^/innovate-with-the-right-minds-tech-recruitment-strategies-for-modern-businesses//?$  /engineering-ai-hiring
+RedirectMatch 301 ^/the-role-of-technology-in-streamlining-and-optimizing-the-tech-recruitment-process//?$  /engineering-ai-hiring
+RedirectMatch 301 ^/importantce-of-positive-candidate-experience-during-tech-recruitment-process//?$  /engineering-ai-hiring
+RedirectMatch 301 ^/tech-hiring-with-ai-2023//?$  /engineering-ai-hiring
+RedirectMatch 301 ^/the-future-of-tech-recruitment-how-to-stay-ahead-of-the-game//?$  /engineering-ai-hiring
+RedirectMatch 301 ^/decoding-the-surge-why-us-companies-partner-with-tech-recruitment-agencies-for-success//?$  /engineering-ai-hiring
+
+# 28 legacy URLs → /executive-search
+RedirectMatch 301 ^/best-talent-acquisition-agency-in-usa-why-there-is-a-need-for-recruitment-agency//?$  /executive-search
+RedirectMatch 301 ^/startup-recruitment-strategies-how-to-hire-employees-for-a-startup-in-usa//?$  /executive-search
+RedirectMatch 301 ^/blog-usas-best-startup-recruitment-services-you-should-try//?$  /executive-search
+RedirectMatch 301 ^/how-to-stay-ahead-of-the-competition-in-talent-acquisition//?$  /executive-search
+RedirectMatch 301 ^/how-businesses-can-achieve-growth-in-the-us-with-the-right-talent-acquisition-partner-in-2023//?$  /executive-search
+RedirectMatch 301 ^/usa-sales-recruitment-agencies-empower-business-growth//?$  /executive-search
+RedirectMatch 301 ^/creating-the-future-top-strategies-from-our-design-recruitment-agency-for-startups//?$  /executive-search
+RedirectMatch 301 ^/why-every-startup-needs-a-dedicated-tech-recruitment-agency//?$  /executive-search
+RedirectMatch 301 ^/top-talent-acquisition-companies-in-2024//?$  /executive-search
+RedirectMatch 301 ^/unlocking-the-power-of-employer-branding-for-talent-acquisition//?$  /executive-search
+RedirectMatch 301 ^/the-benefits-of-using-a-talent-acquisition-agency-in-2023-2024//?$  /executive-search
+RedirectMatch 301 ^/why-the-best-tech-startups-trust-our-recruitment-agency-for-talent-acquisition//?$  /executive-search
+RedirectMatch 301 ^/recruiting-for-startups-what-you-need-to-know-to-hire-well//?$  /executive-search
+RedirectMatch 301 ^/unlocking-americas-startup-talent-why-talhive-is-your-secret-weapon//?$  /executive-search
+RedirectMatch 301 ^/headhunting-in-tech-recruitment-a-comprehensive-guide-to-effective-talent-acquisition//?$  /executive-search
+RedirectMatch 301 ^/unlocking-the-secrets-of-usa-sales-recruitment-agencies-an-in-depth-analysis//?$  /executive-search
+RedirectMatch 301 ^/sealing-the-deal-why-sales-recruitment-agencies-are-crucial-for-your-growing-business//?$  /executive-search
+RedirectMatch 301 ^/how-to-choose-the-right-talent-acquisition-agency-for-your-business//?$  /executive-search
+RedirectMatch 301 ^/challenges-startups-face-in-talent-acquisition-and-how-a-recruitment-agency-can-help//?$  /executive-search
+RedirectMatch 301 ^/unleashing-aesthetic-brilliance-tap-into-elite-talent-with-a-design-recruitment-agency//?$  /executive-search
+RedirectMatch 301 ^/the-future-of-talent-acquisition//?$  /executive-search
+RedirectMatch 301 ^/how-the-best-usa-tech-recruitment-agency-transforms-startups-into-tech-giants//?$  /executive-search
+RedirectMatch 301 ^/the-sales-stars-of-tomorrow-how-usa-sales-recruitment-agencies-are-changing-the-game//?$  /executive-search
+RedirectMatch 301 ^/what-is-recruitment-and-the-need-for-recruitment-agency-2023//?$  /executive-search
+RedirectMatch 301 ^/unleash-your-tech-teams-potential-top-online-platforms-talhives-expertise-in-talent-acquisition//?$  /executive-search
+RedirectMatch 301 ^/maximize-revenue-with-the-right-people-a-look-inside-our-sales-recruitment-process//?$  /executive-search
+RedirectMatch 301 ^/mastering-talent-acquisition-your-roadmap-to-building-a-high-performing-team//?$  /executive-search
+RedirectMatch 301 ^/unlocking-creativity-the-impact-of-partnering-with-a-leading-usa-design-recruitment-agency//?$  /executive-search
+
+# 20 legacy URLs → /hire/ai-engineers-india
+RedirectMatch 301 ^/introducing-ai-for-hiring-the-power-of-chat-gpt-in-recruitment//?$  /hire/ai-engineers-india
+RedirectMatch 301 ^/how-to-use-chat-gpt-for-job-search-hiring-candidates//?$  /hire/ai-engineers-india
+RedirectMatch 301 ^/chat-gpt-vs-traditional-recruitment-whats-the-difference//?$  /hire/ai-engineers-india
+RedirectMatch 301 ^/what-candidates-should-know-about-chat-gpt-and-the-recruitment-process//?$  /hire/ai-engineers-india
+RedirectMatch 301 ^/how-chat-gpt-is-revolutionizing-recruitment-a-detailed-guide//?$  /hire/ai-engineers-india
+RedirectMatch 301 ^/the-future-of-recruitment-chat-gpt-and-ai-powered-hiring//?$  /hire/ai-engineers-india
+RedirectMatch 301 ^/chat-gpt-and-recruitment-marketing-creating-effective-job-ads-and-employer-branding//?$  /hire/ai-engineers-india
+RedirectMatch 301 ^/chat-gpt-and-employee-referrals-a-powerful-tool-for-recruitment//?$  /hire/ai-engineers-india
+RedirectMatch 301 ^/ai-in-recruitment-key-trends-shaping-talent-acquisition-in-2025//?$  /hire/ai-engineers-india
+RedirectMatch 301 ^/how-chat-gpt-can-streamline-the-recruitment-process-and-save-time-and-money//?$  /hire/ai-engineers-india
+RedirectMatch 301 ^/how-recruiters-can-leverage-chat-gpt-to-identify-top-talent//?$  /hire/ai-engineers-india
+RedirectMatch 301 ^/5-reasons-why-companies-should-consider-using-chat-gpt-for-recruitment//?$  /hire/ai-engineers-india
+RedirectMatch 301 ^/chat-gpt-in-recruitment-the-ethical-concerns//?$  /hire/ai-engineers-india
+RedirectMatch 301 ^/how-to-train-chat-gpt-for-recruitment-without-bias//?$  /hire/ai-engineers-india
+RedirectMatch 301 ^/how-chat-gpt-can-help-employers-identify-candidates-with-transferable-skills//?$  /hire/ai-engineers-india
+RedirectMatch 301 ^/how-chat-gpt-can-help-employers-identify-soft-skills-in-candidates//?$  /hire/ai-engineers-india
+RedirectMatch 301 ^/chat-gpt-and-candidate-screening-tips-for-a-successful-screening-process//?$  /hire/ai-engineers-india
+RedirectMatch 301 ^/the-role-of-chat-gpt-in-enhancing-the-candidate-experience//?$  /hire/ai-engineers-india
+RedirectMatch 301 ^/chat-gpt-for-diversity-and-inclusion-in-recruitment-challenges-and-opportunities//?$  /hire/ai-engineers-india
+RedirectMatch 301 ^/how-chat-gpt-can-help-employers-identify-potential-hiring-risks-and-mitigate-them//?$  /hire/ai-engineers-india
+
+# 1 legacy URLs → /hire/android-engineers-india
+RedirectMatch 301 ^/the-mobile-developer-jobs-with-the-highest-salaries-in-2024//?$  /hire/android-engineers-india
+
+# 13 legacy URLs → /india-team-build
+RedirectMatch 301 ^/top-recruitment-agencies-in-india-for-2024-transforming-talent-acquisition//?$  /india-team-build
+RedirectMatch 301 ^/unlocking-keralas-talent-pool-your-guide-to-recruitment-agencies//?$  /india-team-build
+RedirectMatch 301 ^/why-mumbai-delhi-and-bangalore-are-the-recruitment-hubs-of-india//?$  /india-team-build
+RedirectMatch 301 ^/how-recruitment-agencies-like-talhive-are-transforming-business-hiring-in-mumbais-evolving-job-market//?$  /india-team-build
+RedirectMatch 301 ^/talhive-mumbais-premier-recruitment-agency//?$  /india-team-build
+RedirectMatch 301 ^/partnering-up-with-best-tech-recruitment-company-in-bangalore//?$  /india-team-build
+RedirectMatch 301 ^/delhi-diaries-navigating-the-recruitment-jungle-of-indias-capital//?$  /india-team-build
+RedirectMatch 301 ^/unlocking-keralas-talent-pool-your-guide-to-recruitment-agencies-2//?$  /india-team-build
+RedirectMatch 301 ^/navigating-bangalores-ui-ux-talent-pool-a-strategic-guide-by-talhive//?$  /india-team-build
+RedirectMatch 301 ^/mumbais-top-secrets-how-to-choose-the-best-recruitment-agency-in-the-city//?$  /india-team-build
+RedirectMatch 301 ^/bangalore-buzz-the-recruitment-agencies-shaping-the-silicon-valley-of-india//?$  /india-team-build
+RedirectMatch 301 ^/talhive-pioneering-recruitment-solutions-in-keralas-unique-landscape//?$  /india-team-build
+RedirectMatch 301 ^/talhive-pioneering-recruitment-in-keralas-flourishing-industries//?$  /india-team-build
+
+# 51 legacy URLs → /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/why-it-contracting-jobs-are-skyrocketing-in-the-usas-tech-industry//?$  /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/five-essential-leadership-traits-and-how-to-cultivate-them//?$  /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/how-candidate-impersonation-affects-business-2023//?$  /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/how-to-evaluate-remote-work//?$  /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/remote-job-scams-2023//?$  /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/staffing-up-your-startup-with-talhive-your-ultimate-us-recruitment-partner//?$  /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/how-to-assess-and-onboard-remote-employees//?$  /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/level-up-your-product-team-with-talhives-recruitment-expertise//?$  /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/how-to-write-a-job-description-that-attracts-top-talent//?$  /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/outsourcing-vs-in-house-recruitment-navigating-the-best-choice-for-your-business//?$  /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/the-top-8-hiring-software-solutions-tailored-for-small-businesses-and-startups//?$  /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/company-values-how-to-instill-them-for-business-success//?$  /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/unlocking-lucrative-paths-top-it-infrastructure-jobs-of-2024//?$  /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/advantages-and-challenges-of-remote-recruitment//?$  /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/beyond-resumes-why-talhive-is-your-secret-weapon-in-finding-the-perfect-product-leader//?$  /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/building-a-winning-corporate-culture-essential-components-for-success//?$  /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/advance-your-tech-career-by-leveraging-meetup-groups-your-guide-to-growth-networking-and-success//?$  /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/perks-of-recruitment-with-data-driven-ai//?$  /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/global-tech-market-constantly-evolving-in-east-and-west-side-of-the-world//?$  /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/21-ways-to-switch-up-your-remote-work-routine//?$  /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/how-people-analytics-is-transforming-the-hr-landscape//?$  /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/specialized-recruitment-agencies-in-the-usa-finding-the-right-fit-for-your-industry//?$  /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/how-to-negotiate-your-salary-and-get-what-you-deserve//?$  /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/mastering-the-art-of-virtual-recruitment-a-comprehensive-guide-by-talhive//?$  /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/working-global-by-remote-enabling-the-international-workforce//?$  /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/the-future-of-tech-industry-why-working-in-tech-is-still-a-smart-choice//?$  /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/americas-best-professional-recruiting-firms-unleashing-the-power-of-talhive//?$  /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/how-to-retain-employees-in-a-competitive-market//?$  /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/choosing-the-best-recruitment-partner-a-comprehensive-guide//?$  /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/how-to-effectively-hire-remote-employees//?$  /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/impact-of-remote-work-on-recruitment//?$  /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/elevate-your-sales-game-the-untapped-potential-of-specialized-recruitment//?$  /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/choosing-between-multiple-recruitment-agencies-and-a-single-hiring-partner-a-comprehensive-guide//?$  /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/unveiling-the-top-hiring-trends-for-2024-how-talhive-leads-the-charge//?$  /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/how-to-connect-with-your-remote-team-and-build-culture//?$  /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/overcoming-common-remote-recruitment-hurdles//?$  /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/mastering-your-exit-the-5-essential-steps-when-putting-in-your-2-weeks-notice//?$  /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/devops-recruitment-a-deeper-understanding-with-talhive-by-your-side//?$  /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/staffing-shortage-look-no-further-how-recruitment-agencies-can-be-your-solution//?$  /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/navigating-the-future-of-staffing-preparing-for-2024-with-talhive//?$  /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/onboarding-remote-team-members-mastering-the-process-in-the-digital-age//?$  /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/state-of-hiring-as-covid-rises-2023//?$  /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/why-remote-jobs-are-the-future-of-work-2023//?$  /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/tips-for-remote-workers-in-2023//?$  /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/how-to-manage-employee-performance-strategies-for-success//?$  /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/why-hiring-diversity-begins-with-the-first-seven-words//?$  /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/how-startups-can-benefit-from-recruitment-agencies-unlocking-success-through-strategic-hiring//?$  /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/unleashing-the-power-of-expert-technical-recruiting-with-talhive//?$  /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/why-dedicated-recruiters-outperform-job-sites-in-sourcing-talent//?$  /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/soft-skills-emphasized-now-more-than-ever-by-hiring-managers//?$  /insights/india-tech-hiring-market-map
+RedirectMatch 301 ^/remote-work-101-expert-tips-for-succeeding-in-a-virtual-world//?$  /insights/india-tech-hiring-market-map
+
+# 1 legacy URLs → /privacy
+RedirectMatch 301 ^/privacy-policy//?$  /privacy
+
+# ============================================================
+# Final catchall safety
+# ============================================================
+RedirectMatch 301 ^/about-us(\.html|/?)$  /about
+RedirectMatch 301 ^/contact-us(\.html|/?)$  /contact
+RedirectMatch 301 ^/jobs/?$  /
+RedirectMatch 301 ^/candidate/?$  /
+RedirectMatch 301 ^/for-candidates(\.html|/?)$  /
+RedirectMatch 301 ^/thank-you/?$  /
+RedirectMatch 301 ^/terms-condition/?$  /
+RedirectMatch 301 ^/privacy-policy/?$  /privacy
+
+# ── Hire page canonical enforcement: bare slug → /hire/slug (301) ──────────────
+# All hire pages have canonical set to /hire/<slug>. Without these redirects the
+# catch-all rewrite below also serves them at /<slug>, creating a duplicate that
+# Google flags as "chose different canonical than user". These 301s close that gap.
+RedirectMatch 301 ^/devops-sre-engineers-india/?$        /hire/devops-sre-engineers-india
+RedirectMatch 301 ^/ai-engineers-india/?$                /hire/ai-engineers-india
+RedirectMatch 301 ^/machine-learning-engineers-india/?$  /hire/machine-learning-engineers-india
+RedirectMatch 301 ^/data-scientists-india/?$             /hire/data-scientists-india
+RedirectMatch 301 ^/data-engineers-india/?$              /hire/data-engineers-india
+RedirectMatch 301 ^/backend-engineers-india/?$           /hire/backend-engineers-india
+RedirectMatch 301 ^/android-engineers-india/?$           /hire/android-engineers-india
+RedirectMatch 301 ^/cybersecurity-engineers-india/?$     /hire/cybersecurity-engineers-india
+RedirectMatch 301 ^/founding-engineers-india/?$          /hire/founding-engineers-india
+RedirectMatch 301 ^/engineering-managers-india/?$        /hire/engineering-managers-india
+RedirectMatch 301 ^/product-managers-india/?$            /hire/product-managers-india
+RedirectMatch 301 ^/ai-product-managers-india/?$         /hire/ai-product-managers-india
+RedirectMatch 301 ^/product-designers-india/?$           /hire/product-designers-india
+
+# ╔══════════════════════════════════════════════════════════════════╗
+# ║ STEP 2: URL REWRITES — Map clean URLs to .html files             ║
+# ╚══════════════════════════════════════════════════════════════════╝
+
+# If requested URL is a real file or directory, serve directly
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Prefix rewrites for internal-link patterns used across the site
+RewriteRule ^hire/([^/]+)/?$ $1.html [L]
+RewriteRule ^insights/([^/]+)/?$ $1.html [L]
+# Retired case study page (removed Sep 2026)
+RewriteRule ^work/senior-android-australia/?$ /case-studies [R=301,L]
+RewriteRule ^work/founding-engineers-healthtech/?$ /case-studies [R=301,L]
+RewriteRule ^work/([^/]+)/?$ $1.html [L]
+# Insight pieces are canonical at /insights/<slug>; 301 any /blog/<slug> variant to canonical.
+# Renamed blog slugs (executive search terminology update, Sep 2026)
+RewriteRule ^blog/retained-vs-contingent-executive-search/?$ /blog/executive-search-vs-contingent-recruitment [R=301,L]
+RewriteRule ^blog/tech-talent-matching-platforms-vs-retained-search/?$ /blog/tech-talent-matching-platforms-vs-executive-search [R=301,L]
+RewriteRule ^blog/(india-tech-hiring-market-map|india-gcc-hiring-playbook|how-us-companies-hire-in-india|how-european-companies-build-india-teams|engineering-hiring-bangalore-vs-pune-vs-hyderabad|product-hiring-in-india|design-hiring-in-india)/?$ /insights/$1 [R=301,L]
+RewriteRule ^blog/([^/]+)/?$ $1.html [L]
+RewriteRule ^authors/([^/]+)/?$ $1-author.html [L]
+
+# /work → /case-studies (alias for compatibility)
+RewriteRule ^work/?$ /case-studies [R=301,L]
+
+# Simple clean URL rewrite (/executive-search → executive-search.html)
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]
+
+# ╔══════════════════════════════════════════════════════════════════╗
+# ║ STEP 3: PROTECT LEAD DATA FILES                                  ║
+# ║ leads.log + .ratelimit.json must never be readable via browser   ║
+# ╚══════════════════════════════════════════════════════════════════╝
+<Files "leads.log">
+    Require all denied
+</Files>
+<Files ".ratelimit.json">
+    Require all denied
+</Files>
+# Hidden dotfiles (belt + suspenders for the rate-limit file)
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
+
+# Custom 404
+ErrorDocument 404 /404.html
+
+# Security
+Options -Indexes
