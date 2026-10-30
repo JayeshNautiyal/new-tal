@@ -641,6 +641,7 @@ RewriteRule ^work/([^/]+)/?$ $1.html [L]
 RewriteRule ^blog/retained-vs-contingent-executive-search/?$ /blog/executive-search-vs-contingent-recruitment [R=301,L]
 RewriteRule ^blog/tech-talent-matching-platforms-vs-retained-search/?$ /blog/tech-talent-matching-platforms-vs-executive-search [R=301,L]
 RewriteRule ^blog/(india-tech-hiring-market-map|india-gcc-hiring-playbook|how-us-companies-hire-in-india|how-european-companies-build-india-teams|engineering-hiring-bangalore-vs-pune-vs-hyderabad|product-hiring-in-india|design-hiring-in-india)/?$ /insights/$1 [R=301,L]
+RewriteRule ^blog/([^/]+)\.html$ /blog/$1 [R=301,L]
 RewriteRule ^blog/([^/]+)/?$ $1.html [L]
 RewriteRule ^authors/([^/]+)/?$ $1-author.html [L]
 
