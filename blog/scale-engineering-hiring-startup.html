@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+<title>How to Scale Engineering Hiring from 5 to 50 Without an Internal TA Team | Talhive</title>
+<meta name="description" content="Scaling engineering hiring from 5 to 50 without a full internal TA function is possible with the right model. Learn the three phases, when to use embedded RPO, and how to avoid the most common scaling traps.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Talhive">
+<link rel="canonical" href="https://www.talhive.com/blog/scale-engineering-hiring-startup">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to Scale Engineering Hiring from 5 to 50 Without an Internal TA Team">
+<meta property="og:description" content="Scaling engineering hiring from 5 to 50 without a full internal TA function is possible with the right model. Learn the three phases, when to use embedded RPO, and how to avoid the most common scaling traps.">
+<meta property="og:url" content="https://www.talhive.com/blog/scale-engineering-hiring-startup">
+<meta property="og:site_name" content="Talhive">
+<meta property="og:image" content="https://www.talhive.com/assets/og-talhive.png">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Scale Engineering Hiring from 5 to 50 Without an Internal TA Team">
+<meta name="twitter:description" content="Scaling engineering hiring from 5 to 50 without a full internal TA function is possible with the right model.">
+<meta name="twitter:image" content="https://www.talhive.com/assets/og-talhive.png">
+
+<!-- Favicons -->
+<link rel="icon" type="image/png" href="../assets/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="shortcut icon" href="../assets/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="../global.css">
+
+<!-- Article Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Scale Engineering Hiring from 5 to 50 Without an Internal TA Team",
+  "description": "Scaling engineering hiring from 5 to 50 without a full internal TA function is possible with the right model. Learn the three phases, when to use embedded RPO, and how to avoid the most common scaling traps.",
+  "author": { "@type": "Organization", "name": "Talhive", "url": "https://www.talhive.com" },
+  "publisher": { "@type": "Organization", "name": "Talhive", "url": "https://www.talhive.com", "logo": { "@type": "ImageObject", "url": "https://www.talhive.com/assets/logo.svg" } },
+  "datePublished": "2024-10-01",
+  "dateModified": "2024-10-01",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.talhive.com/blog/scale-engineering-hiring-startup" },
+  "image": "https://www.talhive.com/assets/og-talhive.png",
+  "articleSection": "How RPO Works",
+  "keywords": ["scale engineering hiring", "startup hiring", "embedded RPO", "Recruitment Process Outsourcing services", "RPO in India"]
+}
+</script>
+
+<!-- FAQPage Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "When should a startup move from founder-led hiring to a structured TA function?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most startups benefit from a structured approach once they need to hire more than 8-10 engineers in a 12-month window. Below that threshold, founder involvement is often more effective than building infrastructure."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is embedded RPO the same as outsourcing hiring?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Embedded RPO places a dedicated recruiter inside your team who operates under your processes, uses your tools, and attends your planning sessions. It is closer to augmenting your team than outsourcing a function."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What headcount threshold justifies building an internal TA team?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most companies find internal TA becomes cost-effective once sustained hiring volume requires more than one full-time recruiter consistently. For engineering teams, that is typically 30 or more hires per year across multiple specialisations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can embedded RPO work for companies hiring outside India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Embedded RPO is particularly effective for global companies building engineering teams in India. Talhive's embedded model covers sourcing, screening, and coordination across time zones, with visibility at every stage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take to get an embedded recruiter up to speed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "With a structured onboarding process, an embedded recruiter typically reaches full productivity within 10 to 14 days. The first week covers role briefs, hiring criteria, and tool access. The second week moves into active sourcing."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+  :root {
+    --cream: #F4F1EA;
+    --cream-lt: #FAF8F4;
+    --cream-dk: #E8E3D8;
+    --ink: #171410;
+    --ink-2: #2C2820;
+    --stone: #6B6258;
+    --stone-lt: #9A9088;
+    --navy: #1C3A5C;
+    --navy-lt: #2C5585;
+    --rule: rgba(23,20,16,.1);
+    --rule-dk: rgba(23,20,16,.18);
+    --serif: "Cormorant Garamond", Georgia, serif;
+    --sans: "DM Sans", system-ui, sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container-sm {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* Hero */
+  .blog-hero {
+    padding: clamp(80px, 10vw, 120px) 0 clamp(40px, 6vw, 72px);
+    border-bottom: 1px solid var(--rule-dk);
+  }
+
+  .blog-overline {
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--stone);
+    margin-bottom: 20px;
+  }
+
+  .blog-h1 {
+    font-family: var(--serif);
+    font-size: clamp(36px, 5vw, 64px);
+    font-weight: 500;
+    line-height: 1.1;
+    color: var(--ink);
+    margin-bottom: 24px;
+    letter-spacing: -.01em;
+  }
+
+  .blog-h1 em {
+    font-style: italic;
+    color: var(--navy);
+  }
+
+  .blog-lead {
+    font-size: clamp(16px, 2vw, 19px);
+    color: var(--stone);
+    max-width: 620px;
+    line-height: 1.65;
+    margin-bottom: 32px;
+  }
+
+  .blog-meta {
+    display: flex;
+    gap: 20px;
+    font-size: 13px;
+    color: var(--stone-lt);
+  }
+
+  .blog-meta span::before {
+    content: "· ";
+  }
+
+  .blog-meta span:first-child::before {
+    content: "";
+  }
+
+  /* Prose */
+  .prose-wrap {
+    padding: clamp(48px, 7vw, 88px) 0;
+  }
+
+  .prose h2 {
+    font-family: var(--serif);
+    font-size: clamp(24px, 3.5vw, 36px);
+    font-weight: 500;
+    color: var(--ink);
+    margin: 56px 0 18px;
+    line-height: 1.2;
+  }
+
+  .prose h3 {
+    font-family: var(--sans);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--navy);
+    margin: 32px 0 12px;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+  }
+
+  .prose p {
+    margin-bottom: 22px;
+    color: var(--ink-2);
+  }
+
+  .prose ul, .prose ol {
+    padding-left: 24px;
+    margin-bottom: 22px;
+    color: var(--ink-2);
+  }
+
+  .prose li {
+    margin-bottom: 8px;
+  }
+
+  .prose a {
+    color: var(--navy);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+  }
+
+  .prose a:hover {
+    color: var(--navy-lt);
+  }
+
+  .prose strong {
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .divider {
+    height: 1px;
+    background: var(--rule-dk);
+    margin: 48px 0;
+  }
+
+  /* Phase timeline component */
+  .phase-timeline {
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .phase-item {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 0 20px;
+    position: relative;
+  }
+
+  .phase-item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: 27px;
+    top: 52px;
+    bottom: 0;
+    width: 2px;
+    background: var(--rule-dk);
+  }
+
+  .phase-num {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 2px solid var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--navy);
+    flex-shrink: 0;
+    background: var(--cream);
+    position: relative;
+    z-index: 1;
+  }
+
+  .phase-body {
+    padding: 8px 0 40px;
+  }
+
+  .phase-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--stone);
+    margin-bottom: 4px;
+  }
+
+  .phase-title {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 10px;
+  }
+
+  .phase-desc {
+    font-size: 15px;
+    color: var(--ink-2);
+    line-height: 1.65;
+    margin: 0;
+  }
+
+  /* Signal table */
+  .signal-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 32px 0;
+    font-size: 15px;
+  }
+
+  .signal-table th {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--stone);
+    padding: 10px 14px;
+    border-bottom: 2px solid var(--rule-dk);
+    text-align: left;
+  }
+
+  .signal-table td {
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--rule);
+    color: var(--ink-2);
+    vertical-align: top;
+  }
+
+  .signal-table tr:last-child td {
+    border-bottom: none;
+  }
+
+  .signal-table td:first-child {
+    font-weight: 500;
+    color: var(--ink);
+  }
+
+  .signal-table .badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 2px 8px;
+    border-radius: 20px;
+    letter-spacing: .05em;
+  }
+
+  .signal-table .badge-rpo {
+    background: rgba(28,58,92,.08);
+    color: var(--navy);
+  }
+
+  .signal-table .badge-internal {
+    background: rgba(107,98,88,.1);
+    color: var(--stone);
+  }
+
+  /* Readiness checklist */
+  .readiness-list {
+    list-style: none;
+    padding: 0;
+    margin: 28px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .readiness-list li {
+    display: grid;
+    grid-template-columns: 24px 1fr;
+    gap: 12px;
+    align-items: start;
+    font-size: 15px;
+    color: var(--ink-2);
+    padding: 14px 16px;
+    background: var(--cream-lt);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+  }
+
+  .readiness-list li::before {
+    content: none;
+  }
+
+  .check-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1.5px solid var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .check-icon svg {
+    width: 10px;
+    height: 10px;
+    stroke: var(--navy);
+    stroke-width: 2.5;
+    fill: none;
+  }
+
+  /* FAQ */
+  .faq-section {
+    padding: clamp(40px, 6vw, 72px) 0;
+    background: var(--cream-lt);
+    border-top: 1px solid var(--rule-dk);
+  }
+
+  .faq-title {
+    font-family: var(--serif);
+    font-size: clamp(26px, 3.5vw, 38px);
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 36px;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid var(--rule-dk);
+  }
+
+  .faq-item:first-of-type {
+    border-top: 1px solid var(--rule-dk);
+  }
+
+  .fb {
+    width: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .fq {
+    font-family: var(--sans);
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ink);
+    line-height: 1.5;
+  }
+
+  .fi {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    position: relative;
+    color: var(--stone);
+  }
+
+  .fi::before, .fi::after {
+    content: "";
+    position: absolute;
+    background: currentColor;
+    border-radius: 1px;
+  }
+
+  .fi::before { width: 12px; height: 1.5px; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+  .fi::after  { width: 1.5px; height: 12px; top: 50%; left: 50%; transform: translate(-50%, -50%); transition: transform .25s; }
+
+  .fb[aria-expanded="true"] .fi::after { transform: translate(-50%, -50%) rotate(90deg); }
+
+  .fa {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .3s ease;
+  }
+
+  .fa p {
+    padding: 0 0 20px;
+    font-size: 15px;
+    color: var(--stone);
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  /* CTA Band */
+  .cta-band {
+    background: var(--navy);
+    border-radius: 12px;
+    padding: clamp(36px, 5vw, 56px) clamp(24px, 5vw, 56px);
+    margin: 48px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  @media (min-width: 600px) {
+    .cta-band { flex-direction: row; align-items: center; justify-content: space-between; }
+  }
+
+  .cta-copy h3 {
+    font-family: var(--serif);
+    font-size: clamp(22px, 3vw, 30px);
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+
+  .cta-copy p {
+    font-size: 14px;
+    color: rgba(255,255,255,.65);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .cta-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+
+  .btn-cream {
+    display: inline-block;
+    padding: 13px 24px;
+    background: var(--cream);
+    color: var(--navy);
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+    transition: background .2s;
+  }
+
+  .btn-cream:hover { background: #fff; }
+
+  .btn-ghost {
+    display: inline-block;
+    padding: 13px 24px;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,.3);
+    color: rgba(255,255,255,.85);
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 6px;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+    transition: border-color .2s;
+  }
+
+  .btn-ghost:hover { border-color: rgba(255,255,255,.6); }
+
+  /* Related */
+  .related-section {
+    padding: clamp(40px, 6vw, 64px) 0 clamp(48px, 8vw, 96px);
+  }
+
+  .related-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--stone);
+    margin-bottom: 24px;
+  }
+
+  .related-grid {
+    display: grid;
+    gap: 16px;
+  }
+
+  @media (min-width: 560px) {
+    .related-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  .related-card {
+    border: 1px solid var(--rule-dk);
+    border-radius: 8px;
+    padding: 20px;
+    text-decoration: none;
+    background: var(--cream-lt);
+    transition: border-color .2s, transform .2s;
+    display: block;
+  }
+
+  .related-card:hover {
+    border-color: var(--navy);
+    transform: translateY(-2px);
+  }
+
+  .rc-tag {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--stone-lt);
+    margin-bottom: 8px;
+  }
+
+  .rc-title {
+    font-family: var(--serif);
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--ink);
+    line-height: 1.35;
+  }
+
+  @media (max-width: 559px) {
+    .phase-item { grid-template-columns: 44px 1fr; }
+    .phase-num { width: 44px; height: 44px; font-size: 18px; }
+    .phase-item:not(:last-child)::after { left: 21px; top: 44px; }
+    .signal-table { font-size: 13px; }
+  }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<div id="th-header"></div>
+
+<div class="blog-hero">
+  <div class="container-sm">
+    <p class="blog-overline">How RPO Works &nbsp;·&nbsp; 9 min read</p>
+    <h1 class="blog-h1">How to Scale Engineering Hiring from <em>5 to 50</em> Without an Internal TA Team</h1>
+    <p class="blog-lead">Most startups try to solve a hiring volume problem with headcount. Before you post a job for an internal recruiter, read this guide on how embedded RPO can carry you through the entire growth arc.</p>
+    <div class="blog-meta">
+      <span>Talhive</span>
+      <span>October 2024</span>
+      <span>Engineering Hiring</span>
+    </div>
+  </div>
+</div>
+
+<div class="prose-wrap">
+  <div class="container-sm">
+    <article class="prose">
+
+      <h2>The Startup Scaling Trap</h2>
+      <p>You have five engineers and a product that is starting to work. The roadmap has doubled in scope, three engineers are maxed out, and your best candidate from last month accepted an offer elsewhere because the process took six weeks. So you do what feels logical: you decide it is time to hire a recruiter.</p>
+      <p>Then you spend three months trying to find a good one. The recruiter you eventually hire spends their first two months learning the domain, building a process from scratch, and figuring out what a senior backend engineer at your company actually looks like. Meanwhile, the engineering backlog grows and your CTO is still doing interviews on Saturdays.</p>
+      <p>This is the startup scaling trap. The solution to a hiring velocity problem is not always adding headcount to the hiring function. For companies between roughly 5 and 50 engineers, there is often a faster, more capital-efficient model available: <a href="/rpo-embedded-hiring">embedded Recruitment Process Outsourcing</a>.</p>
+
+      <h2>Why Internal TA Is Not Always the Right First Move</h2>
+      <p>Building an internal talent acquisition function makes clear sense once you are hiring at sustained volume, across multiple specialisations, consistently, throughout the year. Before that point, the economics rarely work in your favour.</p>
+      <p>Consider what it actually takes to get an internal recruiter to full productivity. You need to hire them, onboard them into your technical context, give them the tools and access they need, align them with your hiring managers, and establish a process they can run. In a domain like engineering, where role complexity is high and candidate quality signals are non-obvious, this ramp can take three to five months. During that window, your hiring velocity has not improved.</p>
+      <p>There is also a sequencing problem. Early-stage startups often do not yet have the process infrastructure that makes an internal recruiter effective. No structured interview process, no ATS properly configured, no sourcing playbook, no job description template that converts. Hiring a recruiter before building that infrastructure means you are paying recruiter salaries to figure out the basics.</p>
+
+      <blockquote style="border-left: 3px solid var(--navy); padding: 16px 24px; margin: 32px 0; background: var(--cream-lt); border-radius: 0 6px 6px 0;">
+        <p style="font-family: var(--serif); font-size: 20px; font-style: italic; color: var(--ink); line-height: 1.5; margin: 0;">"We hired a recruiter at series A. They were productive by the time we closed series B."</p>
+        <p style="font-size: 13px; color: var(--stone); margin: 10px 0 0;">A CTO's honest reflection on the onboarding gap</p>
+      </blockquote>
+
+      <p>This is not an argument against internal TA. It is an argument that timing matters and that there is a more appropriate tool for each stage of growth.</p>
+
+      <h2>The Embedded RPO Model for Scaling Startups</h2>
+      <p>Embedded <a href="/rpo-embedded-hiring">Recruitment Process Outsourcing services</a> work differently from agency contingency recruiting. Rather than placing an external recruiter who works on your roles from a distance, the embedded model integrates a dedicated recruiter directly into your team. They attend your standups, use your ATS, run your process, and build your pipeline, typically within a structured engagement period rather than an open-ended, ongoing cost.</p>
+      <p>For a startup scaling from 5 to 50 engineers, this matters for several reasons. First, it compresses the time between deciding to hire and having a functioning hiring engine. A well-structured <a href="/rpo-embedded-hiring">embedded RPO</a> engagement can have an experienced recruiter running active sourcing within 10 to 14 days of kick-off. Second, it brings a sourcing infrastructure that a single internal recruiter would take months to build: vetted Boolean strings, tested outreach cadences, an existing warm network of engineers, and access to platforms that are expensive to maintain individually. Third, it is cost-bounded. You know what a three-month or six-month engagement will cost. An internal hire is open-ended.</p>
+
+      <h2>Structuring for Scale: Three Phases</h2>
+      <p>The trajectory from 5 engineers to 50 does not happen uniformly. It typically moves through three distinct phases, each with different hiring demands and different optimal structures.</p>
+
+      <div class="phase-timeline">
+        <div class="phase-item">
+          <div class="phase-num">1</div>
+          <div class="phase-body">
+            <div class="phase-label">Phase 1 &nbsp;·&nbsp; Engineers 5 to 15</div>
+            <div class="phase-title">Proof-of-concept hiring</div>
+            <p class="phase-desc">You are hiring slowly and carefully. Each engineer will still be interviewed by the founder or CTO. Process is light, evaluation is relationship-driven, and volume is low. An embedded recruiter on a short engagement is ideal here: focused sourcing on a handful of critical roles, fast shortlists, no infrastructure overhead.</p>
+          </div>
+        </div>
+        <div class="phase-item">
+          <div class="phase-num">2</div>
+          <div class="phase-body">
+            <div class="phase-label">Phase 2 &nbsp;·&nbsp; Engineers 15 to 35</div>
+            <div class="phase-title">Process-building phase</div>
+            <p class="phase-desc">Hiring volume is increasing and the ad-hoc approach is breaking down. Interview coordination is consuming engineering time. Offer acceptance rates are inconsistent. This phase demands both sourcing capacity and process infrastructure. Embedded RPO services with a process component are well-suited here: standardised briefs, structured interview guides, ATS configuration, and active pipeline management across multiple concurrent roles. This is also when <a href="/india-team-build">building an India engineering team</a> often becomes relevant for cost and talent pool reasons.</p>
+          </div>
+        </div>
+        <div class="phase-item">
+          <div class="phase-num">3</div>
+          <div class="phase-body">
+            <div class="phase-label">Phase 3 &nbsp;·&nbsp; Engineers 35 to 50</div>
+            <div class="phase-title">Transition and handover</div>
+            <p class="phase-desc">By this stage, you have the volume and consistency to justify an internal TA hire. But the embedded model can continue to support the transition: the recruiter has built your playbook, calibrated your criteria, and trained your hiring managers. Handing over to an internal team now is clean rather than starting from scratch.</p>
+          </div>
+        </div>
+      </div>
+
+      <h2>What You Need Ready Before You Start</h2>
+      <p>Embedded RPO compresses time-to-hire significantly, but it is not a black box. The quality of your output is directly connected to the clarity of your input. Before engaging an embedded model, the following should be in place or built in the first week of onboarding.</p>
+
+      <ul class="readiness-list">
+        <li>
+          <span class="check-icon"><svg viewBox="0 0 12 10"><polyline points="1,5 4,9 11,1"/></svg></span>
+          <span><strong>A hiring brief per open role</strong> that covers not just skills but the problem the hire is solving, the team they are joining, and the signals that indicate strong fit. Vague JDs produce vague shortlists.</span>
+        </li>
+        <li>
+          <span class="check-icon"><svg viewBox="0 0 12 10"><polyline points="1,5 4,9 11,1"/></svg></span>
+          <span><strong>A designated hiring manager per role</strong> who is available for calibration in the first week. One conversation before sourcing starts saves two weeks of misdirected outreach.</span>
+        </li>
+        <li>
+          <span class="check-icon"><svg viewBox="0 0 12 10"><polyline points="1,5 4,9 11,1"/></svg></span>
+          <span><strong>ATS access</strong> or willingness to set one up. An embedded recruiter needs a system to log candidates, track stages, and make the pipeline visible to your team.</span>
+        </li>
+        <li>
+          <span class="check-icon"><svg viewBox="0 0 12 10"><polyline points="1,5 4,9 11,1"/></svg></span>
+          <span><strong>Clear interview stages</strong>, even if minimal. A two-stage process with a defined technical screen and a culture conversation is enough to begin.</span>
+        </li>
+        <li>
+          <span class="check-icon"><svg viewBox="0 0 12 10"><polyline points="1,5 4,9 11,1"/></svg></span>
+          <span><strong>Offer bandwidth</strong>. You need to know who can approve and extend an offer, and within what timeframe. The most common source of candidate loss is a shortlist that moves fast and an offer process that does not.</span>
+        </li>
+      </ul>
+
+      <h2>When to Transition to Internal TA</h2>
+      <p>Embedded RPO is not a permanent state. It is a tool appropriate for a particular growth window. Knowing when to transition to internal TA is part of using it well.</p>
+
+      <p>The signal is usually consistent volume rather than a specific headcount. If you are reliably hiring five or more engineers per quarter, across more than two or three role types, with no major seasonal gaps, the economics of internal TA begin to improve. The infrastructure your embedded recruiter has built, the briefs, the sourcing playbooks, the interview guides, become the foundation for your internal team rather than a replacement for one.</p>
+
+      <table class="signal-table">
+        <thead>
+          <tr>
+            <th>Signal</th>
+            <th>Better fit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Fewer than 15 hires per year, variable cadence</td>
+            <td><span class="badge badge-rpo">Embedded RPO</span></td>
+          </tr>
+          <tr>
+            <td>Rapid sprint hiring (10+ hires in 3 months)</td>
+            <td><span class="badge badge-rpo">Embedded RPO</span></td>
+          </tr>
+          <tr>
+            <td>New market or geography, no existing recruiter network</td>
+            <td><span class="badge badge-rpo">Embedded RPO</span></td>
+          </tr>
+          <tr>
+            <td>Need to build sourcing infrastructure quickly</td>
+            <td><span class="badge badge-rpo">Embedded RPO</span></td>
+          </tr>
+          <tr>
+            <td>30+ hires per year, consistent volume, multiple functions</td>
+            <td><span class="badge badge-internal">Internal TA</span></td>
+          </tr>
+          <tr>
+            <td>Strong employer brand, high inbound application volume</td>
+            <td><span class="badge badge-internal">Internal TA</span></td>
+          </tr>
+          <tr>
+            <td>Compliance requirements needing in-house ownership</td>
+            <td><span class="badge badge-internal">Internal TA</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>RPO services in India have also made this model increasingly accessible for global companies. Talhive's embedded model supports companies building engineering teams across India's major tech hubs, with sourcing networks calibrated to the local market and processes designed to run alongside remote hiring managers in the UK, US, and Europe.</p>
+
+      <p>The goal is not to never build an internal TA function. The goal is to arrive at that point having already built the infrastructure, the process, the candidate experience, and the hiring culture that makes an internal team effective from day one. <a href="/rpo-embedded-hiring">Embedded RPO</a> is the bridge that gets you there without the 12-month ramp.</p>
+
+    </article>
+    <div class="divider"></div>
+  </div>
+</div>
+
+<!-- FAQ Section -->
+<div class="faq-section">
+  <div class="container-sm">
+    <h2 class="faq-title">Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <button class="fb" aria-expanded="false">
+        <span class="fq">When should a startup move from founder-led hiring to a structured TA function?</span>
+        <span class="fi" aria-hidden="true"></span>
+      </button>
+      <div class="fa">
+        <p>Most startups benefit from a structured approach once they need to hire more than 8 to 10 engineers in a 12-month window. Below that threshold, founder involvement is often more effective than building infrastructure.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="fb" aria-expanded="false">
+        <span class="fq">Is embedded RPO the same as outsourcing hiring?</span>
+        <span class="fi" aria-hidden="true"></span>
+      </button>
+      <div class="fa">
+        <p>No. Embedded RPO places a dedicated recruiter inside your team who operates under your processes, uses your tools, and attends your planning sessions. It is closer to augmenting your team than outsourcing a function.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="fb" aria-expanded="false">
+        <span class="fq">What headcount threshold justifies building an internal TA team?</span>
+        <span class="fi" aria-hidden="true"></span>
+      </button>
+      <div class="fa">
+        <p>Most companies find internal TA becomes cost-effective once sustained hiring volume requires more than one full-time recruiter consistently. For engineering teams, that is typically 30 or more hires per year across multiple specialisations.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="fb" aria-expanded="false">
+        <span class="fq">Can embedded RPO work for companies hiring outside India?</span>
+        <span class="fi" aria-hidden="true"></span>
+      </button>
+      <div class="fa">
+        <p>Yes. Embedded RPO is particularly effective for global companies building engineering teams in India. Talhive's embedded model covers sourcing, screening, and coordination across time zones, with visibility at every stage.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="fb" aria-expanded="false">
+        <span class="fq">How long does it take to get an embedded recruiter up to speed?</span>
+        <span class="fi" aria-hidden="true"></span>
+      </button>
+      <div class="fa">
+        <p>With a structured onboarding process, an embedded recruiter typically reaches full productivity within 10 to 14 days. The first week covers role briefs, hiring criteria, and tool access. The second week moves into active sourcing.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- CTA + Related -->
+<div class="container-sm">
+  <div class="cta-band">
+    <div class="cta-copy">
+      <h3>Ready to scale your engineering team?</h3>
+      <p>Talhive's embedded RPO model is built for startups growing fast without the overhead of a full internal TA function.</p>
+    </div>
+    <div class="cta-actions">
+      <a href="/contact" class="btn-cream">Talk to us</a>
+      <a href="/rpo-embedded-hiring" class="btn-ghost">Explore embedded RPO</a>
+    </div>
+  </div>
+
+  <div class="related-section">
+    <p class="related-label">Related reading</p>
+    <div class="related-grid">
+      <a href="/blog/embedded-rpo-startups" class="related-card">
+        <p class="rc-tag">RPO</p>
+        <p class="rc-title">Why Embedded RPO Works for High-Growth Startups</p>
+      </a>
+      <a href="/blog/how-embedded-rpo-works" class="related-card">
+        <p class="rc-tag">How RPO Works</p>
+        <p class="rc-title">How Embedded RPO Works: From Brief to Shortlist in 14 Days</p>
+      </a>
+      <a href="/blog/rpo-for-tech-startups" class="related-card">
+        <p class="rc-tag">Decision Stage</p>
+        <p class="rc-title">RPO for Tech Startups: Why Volume Models Fail Engineering Teams</p>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div id="th-footer"></div>
+
+<script src="../components.js" defer></script>
+<script>
+  document.querySelectorAll('.fb').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      const panel = btn.nextElementSibling;
+      panel.style.maxHeight = expanded ? '0' : panel.scrollHeight + 'px';
+    });
+  });
+</script>
+</body>
+</html>
