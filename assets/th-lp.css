@@ -1,0 +1,711 @@
+/* Talhive landing-page design system (th-lp)
+   Extracted from /hire/ai-engineers-india, the approved v153 reference page,
+   so every page that adopts the template draws its spacing, typography, card,
+   grid, hero, form and timeline rules from one source instead of a private
+   copy. Blocks are concatenated in their original cascade order; later blocks
+   intentionally override earlier ones, so do not reorder them.
+   v4 base system | v5 sections | v6 hero recomposition | v7 headline scale
+   v8 hero viewport fit + roles hover + specialisms grid | v9 day 0-90 journey
+   v10 mobile pass */
+
+/* ===== th-lp-v4 ===== */
+/* â•â• Talhive AI Engineers â€” landing page template v4 â•â•
+   ONE container. ONE spacing scale. ONE card system. Talhive tokens only. */
+:root{
+  --LPW:1200px;
+  --LPX:clamp(20px,5vw,56px);
+  --LPY:clamp(56px,7vw,100px);
+  --gap:20px;
+  --card-pad:28px;
+}
+/* ---- ONE GRID: normalise every legacy container to the same rails ---- */
+.lp-wrap{max-width:var(--LPW);margin-left:auto;margin-right:auto;padding-left:var(--LPX);padding-right:var(--LPX);}
+.lp-sec{padding-top:var(--LPY);padding-bottom:var(--LPY);}
+.lp-alt{background:var(--cream-lt);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);}
+main .sec{max-width:var(--LPW)!important;margin:0 auto!important;padding:var(--LPY) var(--LPX)!important;}
+main .cred-inner,main .trust-band-inner,main .cluster-wrap{max-width:var(--LPW)!important;margin:0 auto!important;padding-left:var(--LPX)!important;padding-right:var(--LPX)!important;}
+main .related{max-width:var(--LPW)!important;padding-left:var(--LPX)!important;padding-right:var(--LPX)!important;}
+main .cta-band{padding:var(--LPY) 0!important;}
+main .cta-in{max-width:var(--LPW)!important;margin:0 auto;padding:0 var(--LPX);}
+main section[style]{padding-left:0!important;padding-right:0!important;}
+main section[style] > div[style]{max-width:var(--LPW)!important;margin:0 auto!important;padding-left:var(--LPX)!important;padding-right:var(--LPX)!important;}
+
+/* ---- type scale ---- */
+.lp-eye{font-size:10.5px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--navy);margin-bottom:16px;}
+.lp-h1{font-family:var(--serif);font-size:clamp(38px,5.4vw,66px);font-weight:500;line-height:1.02;letter-spacing:-.015em;color:var(--ink);margin:0 0 18px;}
+.lp-h2{font-family:var(--serif);font-size:clamp(26px,3.2vw,40px);font-weight:500;line-height:1.13;color:var(--ink);margin:0 0 14px;}
+.lp-h2 em{font-style:italic;color:var(--navy);}
+.lp-lede{font-size:clamp(16px,1.7vw,19px);line-height:1.62;color:var(--ink);font-weight:400;margin:0 0 16px;max-width:32ch;}
+.lp-para{font-size:14.5px;line-height:1.8;color:var(--stone);font-weight:300;margin:0 0 20px;max-width:62ch;}
+.lp-sub{font-size:14.5px;line-height:1.76;color:var(--stone);font-weight:300;margin:0;max-width:60ch;}
+.lp-head{margin-bottom:44px;}
+.lp-kicker{font-size:9.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--navy);margin-bottom:10px;}
+.lp-subhead{font-size:10.5px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--navy);margin:52px 0 20px;padding-top:24px;border-top:1px solid var(--rule);}
+
+/* ---- buttons ---- */
+.lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;height:52px;padding:0 26px;font-family:var(--sans);font-size:13.5px;font-weight:500;letter-spacing:.03em;text-decoration:none;border:1px solid transparent;transition:background 180ms,color 180ms,border-color 180ms;white-space:nowrap;}
+.lp-btn-p{background:var(--ink);color:var(--white);}
+.lp-btn-p:hover{background:var(--navy);}
+.lp-btn-s{background:transparent;color:var(--ink);border-color:var(--rule-dk);}
+.lp-btn-s:hover{border-color:var(--ink);}
+.lp-btn-w{background:var(--white);color:var(--ink);}
+.lp-btn-gw{background:transparent;color:var(--white);border-color:rgba(255,255,255,.42);}
+.lp-btn-gw:hover{border-color:var(--white);}
+.lp-cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:26px;}
+.lp-cta-c{justify-content:center;margin-bottom:0;}
+.lp-link{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:500;color:var(--navy);text-decoration:none;border-bottom:1px solid var(--rule-dk);padding-bottom:3px;}
+.lp-link:hover{border-bottom-color:var(--navy);}
+.lp-inline-cta{margin-top:34px;}
+
+/* ---- 1. HERO ---- */
+.lp-hero{background:var(--cream);border-bottom:1px solid var(--rule);padding-top:clamp(96px,11vw,132px);padding-bottom:var(--LPY);}
+.lp-hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(28px,4vw,64px);align-items:start;}
+.lp-hero-ticks{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px;}
+.lp-hero-ticks li{position:relative;padding-left:24px;font-size:13px;color:var(--stone);font-weight:300;}
+.lp-hero-ticks li::before{content:"";position:absolute;left:2px;top:4px;width:5px;height:9px;border-right:1.5px solid var(--navy);border-bottom:1.5px solid var(--navy);transform:rotate(42deg);}
+.lp-hero-r{position:relative;}
+.lp-formcard{background:var(--white);border:1px solid var(--rule-dk);box-shadow:0 1px 2px rgba(23,20,16,.04),0 12px 34px rgba(23,20,16,.07);}
+.lp-formcard .fbox{background:transparent!important;border:none!important;padding:34px 34px 30px!important;}
+.lp-formcard .fbox-t{font-size:22px;}
+#hiring-brief{scroll-margin-top:84px;}
+#how-it-works{scroll-margin-top:70px;}
+
+/* ---- 2. PROOF STRIP ---- */
+.lp-proof{background:var(--ink);}
+.lp-proof-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.12);padding-top:0;padding-bottom:0;}
+.lp-proof-i{background:var(--ink);padding:40px 24px;text-align:center;}
+.lp-proof-v{font-family:var(--sans);font-size:clamp(30px,3.6vw,44px);font-weight:300;letter-spacing:-.02em;color:var(--white);line-height:1;}
+.lp-proof-l{font-size:11.5px;color:rgba(255,255,255,.48);margin-top:10px;font-weight:300;line-height:1.5;}
+
+/* ---- shared card system ---- */
+.lp-card{display:flex;flex-direction:column;background:var(--white);border:1px solid var(--rule);padding:var(--card-pad);text-decoration:none;transition:border-color 180ms,box-shadow 180ms;}
+a.lp-card:hover{border-color:var(--rule-dk);box-shadow:0 8px 22px rgba(23,20,16,.06);}
+.lp-alt .lp-card{background:var(--white);}
+.lp-card-h{font-family:var(--serif);font-size:19px;font-weight:500;color:var(--ink);line-height:1.24;margin:0 0 9px;}
+.lp-card-p{font-size:13px;line-height:1.7;color:var(--stone);font-weight:300;margin:0 0 16px;flex:1;}
+.lp-card-a{font-size:11.5px;font-weight:500;letter-spacing:.05em;color:var(--navy);margin-top:auto;}
+.lp-muted{color:var(--stone-lt);}
+.lp-card-here{background:var(--ivory);}
+.lp-card-flat{background:var(--white);}
+.lp-card-num{border-top:2px solid var(--navy);}
+.lp-num{font-family:var(--sans);font-size:12px;font-weight:400;letter-spacing:-.02em;color:#B08D57;margin-bottom:12px;}
+.lp-gt-p{font-family:var(--serif);font-size:18px;font-weight:500;color:var(--ink);line-height:1.36;margin:0;}
+.lp-grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--gap);}
+.lp-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap);}
+.lp-grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--gap);}
+.lp-feat-i{border-top:1px solid var(--rule-dk);padding-top:20px;}
+.lp-feat-h{font-family:var(--serif);font-size:17.5px;font-weight:500;color:var(--ink);margin:0 0 8px;line-height:1.26;}
+
+/* ---- 3. PROBLEM ---- */
+.lp-split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,56px);align-items:start;margin-bottom:40px;}
+.lp-split-r{padding-top:6px;}
+.lp-vs{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap);}
+.lp-vs-col{background:var(--white);border:1px solid var(--rule);padding:30px 28px;}
+.lp-vs-on{background:var(--ivory);border-color:var(--navy);}
+.lp-vs-tag{display:inline-block;font-size:9.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--stone-lt);border:1px solid var(--rule-dk);padding:6px 11px;margin-bottom:16px;}
+.lp-vs-tag-on{color:var(--white);background:var(--navy);border-color:var(--navy);}
+.lp-vs-p{font-size:13.5px;line-height:1.74;color:var(--stone);font-weight:300;margin:0;}
+.lp-vs-p a{color:var(--navy);}
+.lp-note{margin-top:24px;padding:18px 22px;background:var(--cream-dk);border-left:2px solid var(--navy);font-size:13px;line-height:1.7;color:var(--stone);font-weight:300;}
+
+/* ---- 7. COMPARISON TABLE ---- */
+.lp-cmp{border:1px solid var(--rule-dk);background:var(--white);}
+.lp-cmp-head,.lp-cmp-row{display:grid;grid-template-columns:.8fr 1.1fr 1.1fr;}
+.lp-cmp-head{background:var(--cream-dk);border-bottom:1px solid var(--rule-dk);}
+.lp-cmp-head div{padding:16px 20px;font-size:10.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;}
+.lp-cmp-head .lp-cmp-c2{color:var(--stone-lt);}
+.lp-cmp-head .lp-cmp-c3{color:var(--navy);}
+.lp-cmp-row{border-bottom:1px solid var(--rule-lt);}
+.lp-cmp-row:last-child{border-bottom:none;}
+.lp-cmp-row > div{padding:17px 20px;font-size:13.5px;line-height:1.6;color:var(--stone);font-weight:300;}
+.lp-cmp-row .lp-cmp-c1{font-weight:500;color:var(--ink);font-size:12.5px;}
+.lp-cmp-row .lp-cmp-c3{background:rgba(250,243,224,.5);color:var(--ink);}
+.lp-x,.lp-tick{display:inline-block;width:13px;margin-right:11px;position:relative;top:1px;}
+.lp-x::before{content:"";position:absolute;left:0;top:6px;width:11px;height:1px;background:var(--stone-lt);}
+.lp-tick::before{content:"";position:absolute;left:2px;top:1px;width:5px;height:9px;border-right:1.5px solid var(--navy);border-bottom:1.5px solid var(--navy);transform:rotate(42deg);}
+
+/* ---- 8. TIMELINE ---- */
+.lp-time{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--gap);}
+.lp-time-i{background:var(--white);border:1px solid var(--rule);border-top:2px solid var(--navy);padding:26px 24px;}
+.lp-time-n{font-family:var(--sans);font-size:12px;color:#B08D57;margin-bottom:10px;}
+.lp-time-d{font-family:var(--serif);font-size:14px;font-style:italic;color:var(--navy);margin-bottom:6px;}
+.lp-time-h{font-family:var(--serif);font-size:20px;font-weight:500;color:var(--ink);margin:0 0 13px;}
+.lp-time-ul{list-style:none;margin:0;padding:0;}
+.lp-time-ul li{position:relative;padding-left:14px;margin-bottom:8px;font-size:12.5px;line-height:1.62;color:var(--stone);font-weight:300;}
+.lp-time-ul li::before{content:"\00B7";position:absolute;left:0;color:#B08D57;}
+.lp-weeks{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap);margin-top:var(--gap);}
+.lp-week{border:1px solid var(--rule);background:var(--white);padding:20px 22px;font-size:14px;font-weight:500;color:var(--ink);}
+.lp-week span{display:block;font-size:10.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--navy);margin-bottom:7px;}
+.lp-week a{color:inherit;text-decoration:none;border-bottom:1px solid var(--rule-dk);}
+
+/* ---- 9. SPECIALISMS ---- */
+.lp-chips{display:flex;flex-wrap:wrap;gap:10px;}
+.lp-chip{border:1px solid var(--rule-dk);background:var(--white);padding:13px 20px;font-size:13.5px;color:var(--ink);font-weight:400;}
+
+/* ---- 10. MARKET ---- */
+.lp-cities{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap);}
+.lp-city{background:var(--white);border:1px solid var(--rule);padding:30px 26px;}
+.lp-city-v{font-family:var(--sans);font-size:42px;font-weight:300;letter-spacing:-.03em;color:var(--navy);line-height:1;}
+.lp-city-v span{font-size:24px;}
+.lp-city-n{font-family:var(--serif);font-size:19px;font-weight:500;color:var(--ink);margin-top:12px;}
+.lp-city-p{font-size:12.5px;color:var(--stone);font-weight:300;margin:5px 0 0;line-height:1.55;}
+.lp-mi2{margin-top:var(--gap);}
+.lp-mi2 > div{background:var(--white);border:1px solid var(--rule);padding:26px 24px!important;border-bottom:1px solid var(--rule)!important;}
+
+/* ---- 11. CASE STUDY ---- */
+.lp-cs{display:grid;grid-template-columns:1.4fr 1fr;border:1px solid var(--rule-dk);background:var(--white);}
+.lp-cs-l{padding:clamp(30px,4vw,52px);}
+.lp-cs-r{background:var(--cream-dk);padding:clamp(26px,3vw,40px);display:flex;flex-direction:column;justify-content:center;gap:28px;}
+.lp-cs-v{font-family:var(--sans);font-size:40px;font-weight:300;color:var(--navy);line-height:1;letter-spacing:-.02em;}
+.lp-cs-l2{font-size:12px;color:var(--stone);margin-top:7px;font-weight:300;line-height:1.5;}
+
+/* ---- 14. FINAL CTA ---- */
+.lp-final{background:var(--ink);padding-top:var(--LPY);padding-bottom:var(--LPY);}
+.lp-final-in{text-align:center;}
+.lp-final-h{font-family:var(--serif);font-size:clamp(28px,4vw,50px);font-weight:400;color:var(--white);line-height:1.14;margin:0 auto 16px;max-width:18ch;}
+.lp-final-h em{font-style:italic;color:var(--ivory);}
+.lp-final-p{font-size:15px;line-height:1.72;color:rgba(255,255,255,.46);font-weight:300;max-width:60ch;margin:0 auto 34px;}
+
+/* â•â• RESPONSIVE â•â• */
+@media(max-width:1024px){
+  .lp-grid-4,.lp-time{grid-template-columns:repeat(2,1fr);}
+  .lp-hero-grid{grid-template-columns:1fr;gap:38px;}
+  .lp-lede{max-width:none;}
+  .lp-cs{grid-template-columns:1fr;}
+  .lp-cs-r{flex-direction:row;justify-content:space-between;gap:16px;}
+}
+@media(max-width:860px){
+  .lp-grid-3,.lp-cities,.lp-weeks{grid-template-columns:repeat(2,1fr);}
+  .lp-split,.lp-vs,.lp-grid-2{grid-template-columns:1fr;}
+  .lp-cmp-head{display:none;}
+  .lp-cmp-row{grid-template-columns:1fr;border-bottom:1px solid var(--rule-dk);}
+  .lp-cmp-row > div{padding:12px 18px;}
+  .lp-cmp-row .lp-cmp-c1{padding-top:18px;padding-bottom:4px;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--navy);}
+  .lp-cmp-row .lp-cmp-c3{padding-bottom:18px;}
+}
+@media(max-width:600px){
+  :root{--gap:14px;--card-pad:22px;}
+  .lp-grid-3,.lp-grid-4,.lp-time,.lp-cities,.lp-weeks{grid-template-columns:1fr;}
+  .lp-proof-grid{grid-template-columns:repeat(2,1fr);}
+  .lp-proof-i{padding:26px 12px;}
+  .lp-proof-l{font-size:10.5px;}
+  .lp-btn{width:100%;}
+  .lp-cta-row{flex-direction:column;}
+  .lp-cs-r{flex-direction:column;gap:22px;}
+  .lp-formcard .fbox{padding:24px 20px!important;}
+  .lp-head{margin-bottom:30px;}
+  .lp-chip{font-size:12.5px;padding:11px 15px;}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;}}
+
+/* ===== th-lp-v5 ===== */
+/* == Talhive AI Engineers - landing page v5 ==
+   Pulls every remaining legacy band onto the single lp grid, adds the trust
+   module, fixes contrast in market intelligence, and adds the sticky CTA. */
+
+/* ---- ONE GRID: normalise the last legacy bands onto the lp rails ---- */
+main .cluster-section{padding-top:var(--LPY);padding-bottom:var(--LPY);padding-left:0!important;padding-right:0!important;background:var(--cream-lt);}
+main .cluster-wrap{max-width:var(--LPW)!important;margin:0 auto!important;padding-left:var(--LPX)!important;padding-right:var(--LPX)!important;}
+main .trust-band{padding-top:24px;padding-bottom:24px;padding-left:0!important;padding-right:0!important;}
+main .trust-band-inner{max-width:var(--LPW)!important;margin:0 auto!important;padding-left:var(--LPX)!important;padding-right:var(--LPX)!important;}
+main .cred-band .cred-inner{max-width:var(--LPW)!important;margin:0 auto!important;padding-left:var(--LPX)!important;padding-right:var(--LPX)!important;}
+
+/* ---- numbered failure cards (hiring mistakes) ---- */
+.lp-fail{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--gap);}
+.lp-fail-i{background:var(--white);border:1px solid var(--rule);border-left:2px solid var(--navy);padding:var(--card-pad);}
+.lp-fail-n{font-family:var(--sans);font-size:12px;color:#B08D57;margin-bottom:12px;}
+.lp-fail-h{font-family:var(--serif);font-size:18px;font-weight:500;color:var(--ink);line-height:1.26;margin:0 0 9px;}
+.lp-fail-p{font-size:13px;line-height:1.72;color:var(--stone);font-weight:300;margin:0;}
+.lp-fail-p a{color:var(--navy);border-bottom:1px solid var(--rule-dk);text-decoration:none;}
+
+/* ---- market intelligence notes (was white-on-white) ---- */
+.lp-mnote{background:var(--white);border:1px solid var(--rule);border-top:2px solid var(--navy);padding:var(--card-pad);}
+.lp-mnote h3{font-family:var(--serif);font-size:18px;font-weight:500;color:var(--ink);margin:0 0 10px;line-height:1.26;}
+.lp-mnote p{font-size:13px;line-height:1.74;color:var(--stone);font-weight:300;margin:0;}
+.lp-fineprint{font-size:11.5px;color:var(--stone-lt);font-weight:300;margin:16px 0 0;font-style:italic;line-height:1.62;max-width:88ch;}
+
+/* ---- trust / quality module ---- */
+.lp-trust-i{background:var(--white);border:1px solid var(--rule);padding:var(--card-pad);display:flex;flex-direction:column;}
+.lp-trust-k{font-size:9.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--navy);margin-bottom:12px;}
+.lp-trust-h{font-family:var(--serif);font-size:17.5px;font-weight:500;color:var(--ink);line-height:1.26;margin:0 0 9px;}
+.lp-trust-p{font-size:13px;line-height:1.72;color:var(--stone);font-weight:300;margin:0;}
+.lp-engage{margin-top:var(--gap);display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 22px;padding:20px 24px;background:var(--white);border:1px solid var(--rule);}
+.lp-engage-k{font-size:9.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--stone-lt);}
+.lp-engage a{font-size:13.5px;color:var(--navy);text-decoration:none;border-bottom:1px solid var(--rule-dk);}
+.lp-engage a:hover{border-bottom-color:var(--navy);}
+
+/* ---- FAQ on the lp grid ---- */
+.lp-faq{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(28px,4vw,64px);align-items:start;}
+.lp-faq-list .faq-item{border-top:1px solid var(--rule-dk);}
+.lp-faq-list .faq-item:last-child{border-bottom:1px solid var(--rule-dk);}
+.lp-faq-list .fb{padding:20px 0;}
+.lp-faq-list .fq{font-size:16.5px;}
+.lp-faq-list .fa{font-size:13.5px;line-height:1.78;}
+.lp-faq-list .fa a{color:var(--navy);text-decoration:underline;text-underline-offset:2px;}
+
+/* ---- compensation cards adopt the lp card system ---- */
+.comp-grid{gap:var(--gap);margin-top:0;}
+.comp-card{background:var(--white);border:1px solid var(--rule);padding:var(--card-pad);}
+/* Spelling ranges out as "to" widens each band, so let the pair wrap instead
+   of overflowing at narrow two-column widths. */
+.comp-bands{flex-wrap:wrap;gap:14px 26px;}
+.comp-band{min-width:0;}
+.comp-band-v{white-space:nowrap;}
+
+/* ---- CONTEXTUAL CTA: tier three, between the solid primary button and a
+       plain text link. Deliberately shorter (44px vs 52px) and outlined, so a
+       mid-page CTA never competes with the hero or the final conversion. ---- */
+.lp-ctx-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 28px;margin-top:38px;padding-top:26px;border-top:1px solid var(--rule);}
+.lp-ctx-note{font-size:13.5px;line-height:1.68;color:var(--stone);font-weight:300;margin:0;flex:1 1 300px;min-width:0;max-width:62ch;}
+.lp-ctx-acts{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;flex:0 0 auto;}
+.lp-ctx{display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 20px;background:var(--white);border:1px solid var(--navy);color:var(--navy);font-family:var(--sans);font-size:13px;font-weight:500;letter-spacing:.03em;text-decoration:none;white-space:nowrap;transition:background 180ms,color 180ms;}
+.lp-ctx:hover{background:var(--navy);color:var(--white);}
+@media(max-width:700px){
+  .lp-ctx-row{flex-direction:column;align-items:flex-start;gap:18px;margin-top:30px;}
+  .lp-ctx-acts{width:100%;gap:14px;}
+  .lp-ctx{width:100%;justify-content:center;height:48px;}
+}
+
+/* ---- specialism chip row nested inside a section ---- */
+.lp-chiprow{margin-top:34px;padding-top:26px;border-top:1px solid var(--rule);}
+.lp-chiprow-k{font-size:9.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--stone-lt);margin-bottom:16px;}
+
+/* ---- STICKY CTA ---- */
+#lp-sticky{position:fixed;z-index:880;opacity:0;pointer-events:none;transition:opacity 240ms ease,transform 240ms ease;}
+#lp-sticky.on{opacity:1;pointer-events:auto;}
+#lp-sticky .lp-sticky-a{text-decoration:none;font-family:var(--sans);}
+#lp-sticky .lp-sticky-x{cursor:pointer;font-family:var(--sans);line-height:1;}
+@media(min-width:861px){
+  #lp-sticky{right:24px;bottom:24px;transform:translateY(12px);display:flex;align-items:stretch;background:var(--ink);box-shadow:0 12px 36px rgba(23,20,16,.24);}
+  #lp-sticky.on{transform:none;}
+  #lp-sticky .lp-sticky-a{display:inline-flex;align-items:center;gap:9px;padding:16px 22px;font-size:13px;font-weight:500;letter-spacing:.03em;color:var(--white);transition:background 180ms;}
+  #lp-sticky .lp-sticky-a:hover{background:var(--navy);}
+  #lp-sticky .lp-sticky-x{padding:0 15px;background:none;border:none;border-left:1px solid rgba(255,255,255,.14);color:rgba(255,255,255,.42);font-size:16px;transition:color 180ms;}
+  #lp-sticky .lp-sticky-x:hover{color:var(--white);}
+}
+@media(max-width:860px){
+  #lp-sticky{left:0;right:0;bottom:0;transform:translateY(110%);display:flex;align-items:stretch;gap:8px;background:var(--ink);border-top:1px solid rgba(255,255,255,.14);padding:10px 14px;padding-bottom:calc(10px + env(safe-area-inset-bottom,0px));}
+  #lp-sticky.on{transform:none;}
+  #lp-sticky .lp-sticky-a{flex:1 1 auto;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 14px;background:var(--white);color:var(--ink);font-size:13.5px;font-weight:500;}
+  #lp-sticky .lp-sticky-x{flex:0 0 46px;background:none;border:1px solid rgba(255,255,255,.22);color:rgba(255,255,255,.55);font-size:18px;}
+  body.lp-sticky-live footer{padding-bottom:104px;}
+}
+
+/* ---- responsive ---- */
+@media(max-width:860px){
+  .lp-faq{grid-template-columns:1fr;gap:28px;}
+  .lp-fail{grid-template-columns:1fr;}
+}
+@media(prefers-reduced-motion:reduce){#lp-sticky{transition:none;}}
+
+/* ===== th-lp-v6 ===== */
+/* == Talhive AI Engineers - landing page v6 ==
+   Hero recomposition: trust points above the CTAs, the operating-record strip
+   folded into the hero under the CTAs, and the form compacted so it lands
+   inside the first viewport on desktop. */
+
+/* ---- hero shell: shorter, so the form clears the fold ---- */
+.lp-hero{padding-top:clamp(86px,8.5vw,106px);padding-bottom:clamp(44px,5vw,72px);border-bottom:none;}
+.lp-hero-grid{grid-template-columns:1.06fr .94fr;align-items:start;}
+.lp-hero .lp-eye{margin-bottom:14px;}
+.lp-hero .lp-h1{margin-bottom:14px;}
+
+/* ---- 4. lede drops to body scale so it reads as one hierarchy with the paragraph below ---- */
+.lp-hero .lp-lede{font-size:15.5px;line-height:1.72;font-weight:400;color:var(--ink);max-width:54ch;margin:0 0 12px;}
+.lp-hero .lp-para{font-size:14.5px;line-height:1.72;font-weight:300;color:var(--stone);max-width:58ch;margin:0 0 22px;}
+
+/* ---- 1. trust points now sit directly above the CTA row ---- */
+.lp-hero-ticks{gap:8px;margin:0 0 22px;}
+.lp-hero-ticks li{font-size:12.5px;padding-left:22px;line-height:1.5;}
+.lp-hero-ticks li::before{top:3px;}
+.lp-hero .lp-cta-row{margin-bottom:0;gap:12px;}
+
+/* ---- 2. operating record, folded into the hero under the CTAs ---- */
+.lp-herostats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--rule);border-top:1px solid var(--rule-dk);border-bottom:1px solid var(--rule-dk);margin-top:30px;}
+.lp-herostat{background:var(--cream);padding:16px 14px 15px;}
+.lp-herostat-v{font-family:var(--sans);font-size:26px;font-weight:300;letter-spacing:-.02em;color:var(--navy);line-height:1;}
+.lp-herostat-l{font-size:10.5px;color:var(--stone);font-weight:300;line-height:1.42;margin-top:7px;}
+
+/* ---- 3. compact form card: same fields, tighter rhythm ---- */
+.lp-formcard .fbox{padding:26px 26px 24px!important;}
+.lp-formcard .fbox-bar{margin-bottom:18px;}
+.lp-formcard .fbox-t{font-size:19px;margin-bottom:8px;}
+.lp-formcard .fbox-s{font-size:12.5px;margin-bottom:18px;}
+.lp-formcard .field{margin-bottom:12px;}
+.lp-formcard .frow{gap:12px;}
+.lp-formcard .fl-lbl{margin-bottom:5px;}
+.lp-formcard textarea.form-input{min-height:64px;}
+.lp-formcard .fsubmit{padding:13px;margin-top:4px;}
+.lp-formcard .fprivacy{margin-top:7px;}
+/* Inputs stay at 16px on touch widths so iOS never auto-zooms on focus. */
+@media(min-width:861px){.lp-formcard .form-input{padding:9px 12px;font-size:15px;}}
+
+/* ---- responsive ---- */
+@media(max-width:1024px){
+  .lp-hero-grid{grid-template-columns:1fr;}
+  .lp-hero .lp-lede,.lp-hero .lp-para{max-width:none;}
+}
+@media(max-width:680px){
+  .lp-herostats{grid-template-columns:repeat(2,1fr);}
+  .lp-herostat-v{font-size:23px;}
+}
+
+/* ===== th-lp-v7 ===== */
+/* == Talhive AI Engineers - landing page v7 ==
+   Two targeted UI fixes: page-headline scale, and marker/copy alignment in the
+   Talhive Difference comparison. */
+
+/* ---- headline scale: was clamp(38px,5.4vw,66px), which read as oversized
+       against the section headings and pushed the form down. Still clearly
+       above the section h2 scale (clamp(26px,3.2vw,40px)). ---- */
+.lp-h1{font-size:clamp(32px,4.2vw,52px);line-height:1.05;}
+
+/* ---- comparison markers: the tick/dash used to be an inline-block sitting in
+       the same text flow, so a wrapped second line ran back underneath the
+       marker instead of staying aligned with the first line. Marker and copy
+       are now two grid columns with a fixed marker column, which keeps every
+       text block starting at the same x-position at any width. ---- */
+.lp-cmp-row .lp-cmp-c2,
+.lp-cmp-row .lp-cmp-c3{display:grid;grid-template-columns:14px 1fr;column-gap:12px;align-items:start;}
+.lp-cmp-row .lp-x,
+.lp-cmp-row .lp-tick{display:block;width:14px;height:21.6px;margin:0;top:0;position:relative;}
+.lp-cmp-row .lp-x::before{left:1px;top:10px;width:12px;}
+.lp-cmp-row .lp-tick::before{left:3px;top:5px;}
+
+/* ===== th-lp-v8 ===== */
+/* == Talhive AI Engineers - landing page v8 ==
+   Three targeted layout fixes. No colour, type, copy or component redesign.
+   1. Hero: both columns land inside the first viewport, and the form scrolls
+      inside its own card instead of making the page taller.
+   2. "AI talent Talhive places in India": cards highlight on hover and on
+      keyboard focus, not only on click. Click-through is untouched.
+   3. AI specialisms: the chip row becomes a four-column grid on desktop. */
+
+/* ---- 1. HERO: first viewport holds both columns; the form scrolls itself ----
+   The form runs to 821px because it carries eight fields. Left alone that makes
+   the hero 999px tall, so on a 900px laptop the closing fields sit under the
+   fold and a visitor has to scroll the page before they even know there is a
+   form. The cap goes on the CARD, not on the page.
+
+   The numbers it is built from, measured on the rendered page: the nav is fixed
+   at 68px, the hero pads 106px from the top of the document, so the card starts
+   at y=106. Reserving 48px of clearance under the card gives the cap below, and
+   the hero then closes at exactly one viewport whenever the form is the taller
+   column. On a tall display the card never reaches the cap and simply does not
+   scroll.
+
+   The left column is deliberately not stretched to match the card. It keeps its
+   natural height and shares the card's top edge. */
+@media(min-width:1025px){
+  .lp-hero{padding-bottom:48px;}
+  .lp-hero-grid{align-items:start;}
+
+  .lp-formcard{
+    display:flex;
+    flex-direction:column;
+    max-height:calc(100vh - 154px);
+    max-height:calc(100dvh - 154px);
+  }
+  .lp-formcard .fbox{
+    display:flex;
+    flex-direction:column;
+    /* min-height:0 is what actually lets the body shrink and scroll. Without it
+       a flex item refuses to go below its content height and the card overflows. */
+    min-height:0;
+  }
+  /* The intro is pinned, so the form heading is never scrolled out of view. */
+  .lp-form-head{flex:0 0 auto;}
+  .lp-form-body{
+    flex:1 1 auto;
+    min-height:0;
+    overflow-y:auto;
+    scroll-behavior:smooth;
+    /* keeps the wheel inside the form when it reaches either end, so the page
+       behind it does not start moving */
+    overscroll-behavior:contain;
+    border-top:1px solid var(--rule);
+    padding-top:16px;
+    /* pulls the scrollbar out into the card's own right padding so it sits clear
+       of the inputs rather than crowding them */
+    margin-right:-16px;
+    padding-right:16px;
+    scrollbar-width:thin;
+    scrollbar-color:rgba(23,20,16,.2) transparent;
+  }
+  .lp-form-body::-webkit-scrollbar{width:6px;}
+  .lp-form-body::-webkit-scrollbar-track{background:transparent;}
+  .lp-form-body::-webkit-scrollbar-thumb{background:rgba(23,20,16,.2);border-radius:3px;}
+  .lp-form-body::-webkit-scrollbar-thumb:hover{background:rgba(23,20,16,.34);}
+}
+
+/* ---- 2. AI talent Talhive places: hover and focus highlight ----
+   Scoped to .lp-roles so the other two .lp-grid-3 sections keep their own
+   behaviour. The highlight matches the emphasis the current-page card already
+   carries, so the section reads consistently whichever card is active. */
+.lp-roles .lp-card{
+  transition:background-color 200ms ease-out,
+             border-color 200ms ease-out,
+             box-shadow 200ms ease-out;
+}
+.lp-roles a.lp-card:hover,
+.lp-roles a.lp-card:focus-visible{
+  background:var(--ivory);
+  border-color:var(--rule-dk);
+  box-shadow:0 8px 22px rgba(23,20,16,.07);
+}
+.lp-roles a.lp-card:focus-visible{outline:2px solid var(--navy);outline-offset:2px;}
+/* Card one is highlighted by default and steps back only while another card is
+   actually hovered or focused, so exactly one card is emphasised at a time.
+   Browsers without :has() simply leave card one highlighted alongside the
+   hovered card, which is an acceptable degradation rather than a broken state. */
+.lp-roles:has(a.lp-card:hover) .lp-card-here,
+.lp-roles:has(a.lp-card:focus-visible) .lp-card-here{
+  background:var(--white);
+  border-color:var(--rule);
+}
+
+/* ---- 3. AI specialisms: four-column grid ----
+   Was a wrapping flex row, so chip widths tracked their label length and the
+   rows never lined up. Nine real specialisms, four equal columns on desktop. */
+.lp-chips{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+  align-items:stretch;
+}
+.lp-chip{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  min-height:58px;
+  padding:14px 16px;
+  line-height:1.35;
+}
+@media(max-width:1024px){
+  .lp-chips{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:600px){
+  .lp-chips{grid-template-columns:1fr;gap:10px;}
+  /* restores the small-screen chip scale the base sheet sets at this width */
+  .lp-chip{font-size:12.5px;min-height:0;padding:12px 15px;}
+}
+
+/* ===== th-lp-v9 ===== */
+/* == Talhive AI Engineers - landing page v9 ==
+   "How the search works" rebuilt as one continuous day zero to day ninety
+   journey. The stage content, wording and day ranges are the ones already on
+   the page; nothing has been added to the process. What changed is the
+   structure: a three-card week row sitting on top of a four-card stage row gave
+   the section two grids whose column edges never lined up, which is where the
+   header misalignment came from. Both rows are now a single centred spine, and
+   the week labels have been folded into the stage they describe. */
+
+/* Centred section head, so the head and the timeline share one axis. */
+.lp-jrny-head{text-align:center;}
+.lp-jrny-head .lp-sub{margin-left:auto;margin-right:auto;}
+
+/* ---- the journey rail ---- */
+.lp-jrny{
+  position:relative;
+  max-width:840px;
+  margin:0 auto;
+  padding:0;
+  list-style:none;
+}
+/* One unbroken line down the centre. It sits behind the cards and is only
+   visible in the gaps, so the steps read as a single journey rather than four
+   separate cards. */
+.lp-jrny::before{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:0;
+  bottom:0;
+  width:1px;
+  margin-left:-.5px;
+  background:var(--rule-dk);
+}
+.lp-jrny-step{position:relative;}
+
+/* ---- milestone: day label, then a hairline carrying the node ---- */
+.lp-jrny-mark{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:13px;
+  padding:30px 0 26px;
+}
+.lp-jrny-step:first-child .lp-jrny-mark{padding-top:0;}
+.lp-jrny-last .lp-jrny-mark{padding-bottom:0;}
+.lp-jrny-day{
+  position:relative;
+  /* knocks the spine out from behind the label */
+  background:var(--cream);
+  padding:0 14px;
+  font-size:10.5px;
+  font-weight:500;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--navy);
+}
+.lp-jrny-rule{position:relative;display:block;width:100%;height:1px;background:var(--rule);}
+.lp-jrny-rule::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:9px;
+  height:9px;
+  margin:-5px 0 0 -5px;
+  border-radius:50%;
+  background:var(--navy);
+  /* clears the spine immediately around the node */
+  box-shadow:0 0 0 4px var(--cream);
+}
+
+/* ---- stage card: keeps the existing timeline card language ---- */
+.lp-jrny-card{
+  position:relative;
+  background:var(--white);
+  border:1px solid var(--rule);
+  border-top:2px solid var(--navy);
+  padding:26px 28px;
+  /* A fixed heading column is what holds the headings in line: every stage
+     heading starts at the same x and the same y as its own bullets, whatever
+     the bullet copy does. No hand-set margins involved. */
+  display:grid;
+  grid-template-columns:minmax(0,252px) minmax(0,1fr);
+  column-gap:34px;
+  align-items:start;
+}
+.lp-jrny-n{
+  font-family:var(--sans);
+  font-size:12px;
+  font-weight:300;
+  letter-spacing:-.02em;
+  color:#B08D57;
+  margin-bottom:9px;
+}
+.lp-jrny-h{
+  font-family:var(--serif);
+  font-size:20px;
+  font-weight:500;
+  line-height:1.22;
+  color:var(--ink);
+  margin:0 0 7px;
+}
+.lp-jrny-meta{
+  font-size:12px;
+  line-height:1.6;
+  font-weight:300;
+  color:var(--stone-lt);
+  margin:0;
+}
+.lp-jrny-meta a{color:var(--navy);text-decoration:none;border-bottom:1px solid var(--rule-dk);}
+.lp-jrny-ul{list-style:none;margin:0;padding:0;}
+.lp-jrny-ul li{
+  position:relative;
+  padding-left:14px;
+  margin-bottom:8px;
+  font-size:12.5px;
+  line-height:1.62;
+  color:var(--stone);
+  font-weight:300;
+}
+.lp-jrny-ul li:last-child{margin-bottom:0;}
+.lp-jrny-ul li::before{content:"\00B7";position:absolute;left:0;color:#B08D57;}
+
+/* ---- responsive ---- */
+@media(max-width:720px){
+  /* Heading block stacks above its bullets. Headings stay left aligned to the
+     same card edge, so the column still reads straight down the page. */
+  .lp-jrny-card{grid-template-columns:1fr;row-gap:16px;padding:24px 22px;}
+  .lp-jrny-mark{padding:26px 0 22px;gap:11px;}
+  .lp-jrny-h{font-size:19px;}
+}
+@media(max-width:420px){
+  .lp-jrny-card{padding:22px 18px;}
+  .lp-jrny-day{font-size:10px;letter-spacing:.16em;padding:0 11px;}
+}
+
+/* ===== th-lp-v10 ===== */
+/* == Talhive AI Engineers - landing page v10 ==
+   Mobile pass. Every rule here is inside a max-width or hover query, so the
+   desktop layout is untouched. */
+
+/* ---- A. Credibility band: a real clipping bug, not a preference ----
+   The base .cred-row rule sits later in this stylesheet than the two mobile
+   overrides written for it, so on phones the 140px label column survived and
+   squeezed the client names into a 163px slot, where overflow:hidden cut them
+   off. At 375px "Leadership and specialist search" was clipped past the screen
+   edge and simply not readable. Re-asserted at the end of the cascade, where
+   nothing later can undo it. Content and styling are unchanged; only the
+   column structure is corrected.
+
+   Measuring across widths showed the clipping is not only a phone problem: the
+   names are cut anywhere below roughly 1000px, so the row is allowed to wrap at
+   every width rather than at a breakpoint. Above 1000px the content already
+   fits on one line, so wrapping never triggers and desktop is unchanged. */
+.cred-items{flex-wrap:wrap;gap:6px 0;overflow:visible;}
+.cred-item{white-space:normal;}
+@media(max-width:860px){
+  .cred-row{grid-template-columns:1fr;gap:9px;padding:18px 0;}
+  .cred-dot{padding:0 10px;}
+}
+
+/* ---- B. Mobile typography ----
+   The desktop scale leans on small letterspaced type. It reads fine at monitor
+   distance but several items measured 10 to 12.5px on a phone, which is below
+   comfortable reading size. These are exactly the ones the audit flagged. */
+@media(max-width:600px){
+  /* .lp-h1 line-height is not set here on purpose: a site-wide
+     h1{line-height:1.1!important} earlier in the sheet owns it, and 1.1 at the
+     mobile size of 32px is already comfortable. */
+  .lp-eye{font-size:11px;letter-spacing:.16em;margin-bottom:14px;}
+  /* the 9 to 9.5px letterspaced labels are legible on a monitor and not on a
+     phone; lifted just enough to read without changing their character */
+  .cred-lbl,.lp-chiprow-k,.lp-kicker{font-size:10.5px;}
+  .lp-sub{font-size:15px;line-height:1.7;}
+  .lp-hero .lp-lede{font-size:16px;line-height:1.66;}
+  .lp-hero .lp-para{font-size:15px;line-height:1.7;}
+  .lp-hero-ticks{gap:11px;}
+  .lp-hero-ticks li{font-size:14px;line-height:1.5;}
+  .lp-herostat-v{font-size:24px;}
+  .lp-herostat-l{font-size:11.5px;line-height:1.45;}
+  .lp-card-p{font-size:13.5px;line-height:1.7;}
+  .lp-card-a{font-size:12px;}
+  .lp-fail-p{font-size:13.5px;line-height:1.7;}
+  .lp-jrny-meta{font-size:12.5px;}
+  .lp-jrny-ul li{font-size:13.5px;line-height:1.62;}
+  .lp-chip{font-size:13px;}
+  .cred-name,.cred-item{font-size:13px;}
+  .fbox-s{font-size:13px;line-height:1.6;}
+  .fl-lbl{font-size:11px;}
+  .fprivacy{font-size:11.5px;line-height:1.55;}
+}
+
+/* ---- C. Rhythm ----
+   Stacked full-width cards need more air between them than the desktop grid gap
+   provides, and the form should use the width a phone actually has. */
+@media(max-width:600px){
+  :root{--gap:16px;--card-pad:24px;}
+  .lp-head{margin-bottom:26px;}
+  /* The mobile form padding set earlier in the sheet is dead: a later non-media
+     rule overrides it. Re-asserted so the inputs get their width back. */
+  .lp-formcard .fbox{padding:24px 20px!important;}
+}
+
+/* ---- D. Touch ----
+   Standalone link CTAs measured 23px tall, well under a comfortable target.
+   The primary buttons are already 48 to 52px and are left alone. */
+@media(max-width:860px){
+  .lp-link{min-height:44px;}
+}
+/* There is no hover on a touch screen, so the roles cards answer to :active
+   instead. Card one keeps its default highlight and the tap-through to each
+   role page is unchanged. */
+@media(hover:none){
+  .lp-roles a.lp-card:active{background:var(--ivory);border-color:var(--rule-dk);}
+}
