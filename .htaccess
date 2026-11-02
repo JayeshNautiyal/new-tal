@@ -5,6 +5,29 @@
 DirectoryIndex index.html
 RewriteEngine On
 
+# ── Strip .html extension: 301 any request that arrived with .html to the clean URL ──
+# Must come before the "serve real file" short-circuit so /page.html → /page, not served.
+RewriteCond %{THE_REQUEST} \s/(.+?)\.html[\s?]
+RewriteRule ^ /%1 [R=301,L]
+
+# ── 301s for root-level blog duplicate pages → canonical /blog/<slug> ──
+# These root .html files are duplicates; the authoritative URL is always /blog/<slug>.
+RewriteRule ^dedicated-search-mandate-vs-contingency/?$ /blog/dedicated-search-mandate-vs-contingency [R=301,L]
+RewriteRule ^devops-sre-hiring-india/?$ /blog/devops-sre-hiring-india [R=301,L]
+RewriteRule ^embedded-rpo-startups/?$ /blog/embedded-rpo-startups [R=301,L]
+RewriteRule ^embedded-rpo-vs-traditional-recruitment/?$ /blog/embedded-rpo-vs-traditional-recruitment [R=301,L]
+RewriteRule ^executive-search-ai-leadership/?$ /blog/executive-search-ai-leadership [R=301,L]
+RewriteRule ^hire-engineer-india-product-startup-experience/?$ /blog/hire-engineer-india-product-startup-experience [R=301,L]
+RewriteRule ^hiring-senior-product-design-leader-india/?$ /blog/hiring-senior-product-design-leader-india [R=301,L]
+RewriteRule ^how-to-evaluate-executive-search-firm/?$ /blog/how-to-evaluate-executive-search-firm [R=301,L]
+RewriteRule ^how-to-hire-a-cto-india/?$ /blog/how-to-hire-a-cto-india [R=301,L]
+RewriteRule ^how-to-hire-senior-ai-engineers-india/?$ /blog/how-to-hire-senior-ai-engineers-india [R=301,L]
+RewriteRule ^how-to-run-executive-search-vp-engineering-cto-india/?$ /blog/how-to-run-executive-search-vp-engineering-cto-india [R=301,L]
+RewriteRule ^offshore-engineering-team-vs-gcc-india/?$ /blog/offshore-engineering-team-vs-gcc-india [R=301,L]
+RewriteRule ^real-cost-failed-senior-engineering-hire/?$ /blog/real-cost-failed-senior-engineering-hire [R=301,L]
+RewriteRule ^setting-up-gcc-india-talent-search/?$ /blog/setting-up-gcc-india-talent-search [R=301,L]
+RewriteRule ^why-cv-screening-coding-tests-fail-senior-ai/?$ /blog/why-cv-screening-coding-tests-fail-senior-ai [R=301,L]
+
 # ── Canonical host: 301 non-www -> www, and http -> https (avoids duplicate 200 hosts) ──
 RewriteCond %{HTTP_HOST} !^www\.talhive\.com$ [NC]
 RewriteRule ^ https://www.talhive.com%{REQUEST_URI} [L,R=301]
@@ -643,6 +666,12 @@ RewriteRule ^blog/tech-talent-matching-platforms-vs-retained-search/?$ /blog/tec
 RewriteRule ^blog/(india-tech-hiring-market-map|india-gcc-hiring-playbook|how-us-companies-hire-in-india|how-european-companies-build-india-teams|engineering-hiring-bangalore-vs-pune-vs-hyderabad|product-hiring-in-india|design-hiring-in-india)/?$ /insights/$1 [R=301,L]
 RewriteRule ^blog/([^/]+)/?$ blog/$1.html [L]
 RewriteRule ^authors/([^/]+)/?$ $1-author.html [L]
+RewriteRule ^india/([^/]+)/?$ india/$1.html [L]
+RewriteRule ^usa/executive-search/([^/]+)/?$ usa/executive-search/$1.html [L]
+RewriteRule ^usa/([^/]+)/?$ usa/$1.html [L]
+RewriteRule ^services/([^/]+)/?$ services/$1.html [L]
+RewriteRule ^solutions/([^/]+)/?$ solutions/$1.html [L]
+RewriteRule ^case-studies/([^/]+)/?$ case-studies/$1.html [L]
 
 # /work → /case-studies (alias for compatibility)
 RewriteRule ^work/?$ /case-studies [R=301,L]
